@@ -5,7 +5,6 @@
  */
 package visao;
 
-import java.awt.CardLayout;
 import javax.swing.JPanel;
 
 /**
@@ -139,7 +138,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
             .addGap(0, 416, Short.MAX_VALUE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(850, 476));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
@@ -164,6 +164,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         // TODO add your handling code here:
+        TelaDoador doador = new TelaDoador();
+        doador.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
