@@ -1,10 +1,10 @@
-# TRABALHO 01
+# SMO
 Trabalho desenvolvido durante a disciplina de BD
 
 #Sumário
 
 ###1	COMPONENTES<br>
-Integrantes do grupo<br>
+Cassiano Künsch das Neves<br>
 
 ###2	INTRODUÇÃO E MOTIVAÇAO<br>
 Este documento contém a especificação do projeto do banco de dados <nome do projeto> e motivação da escolha realizada. <br>
