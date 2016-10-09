@@ -8,6 +8,7 @@ package visao;
 import visao.TelasCadastro.TelaCadMotorista;
 import Controle.ControleMotorista;
 import Model.Motorista;
+import Model.Usuario;
 import Util.TabelaMotorista;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -15,8 +16,6 @@ import java.util.List;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import javax.swing.ListSelectionModel;
-import javax.swing.table.AbstractTableModel;
-import javax.swing.table.TableModel;
 import visao.TelasUpdate.TelaUpdateMotorista;
 
 /**
@@ -28,13 +27,12 @@ public class TelaMotorista extends javax.swing.JFrame {
     /**
      * Creates new form TelaMotorista
      */
-    DefaultListModel model;
     ControleMotorista controle  = new ControleMotorista();
-    
-    public TelaMotorista() {
+    Usuario usuario;
+    public TelaMotorista(Usuario user) {
         initComponents();
-        model = new DefaultListModel();
         //jListMotoristas.setModel(model);
+        usuario = user;
         atualiza();
     }
 
@@ -240,13 +238,12 @@ public class TelaMotorista extends javax.swing.JFrame {
 
     private void jButtonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarActionPerformed
         // TODO add your handling code here:
-        TelaPrincipal telaPrincipal = new TelaPrincipal();
+        TelaPrincipal telaPrincipal = new TelaPrincipal(usuario);
         telaPrincipal.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButtonVoltarActionPerformed
     
     private void atualiza() {
-        model.clear();
         ArrayList dados = new ArrayList();
         String [] colunas = new String[]{"ID", "Nome", "Endereço", "CEP",
             "Email", "CPF", "Cidade", "UF", "Validade CNH", "Telefone",
@@ -259,7 +256,6 @@ public class TelaMotorista extends javax.swing.JFrame {
                 motorista.getCpf(), motorista.getCidade(), motorista.getUf(),
                 motorista.getValidadeCnh(),motorista.getTelefone(), motorista.getCnh(), motorista.getBairro(),
                 motorista.getRg(), motorista.getNascimento()});
-            //model.addElement(motorista.getIdmotorista() + " " + motorista.getNome());
         }
         TabelaMotorista tabela = new TabelaMotorista(dados, colunas);
         jTableMotoristas.setModel(tabela);
@@ -297,7 +293,7 @@ public class TelaMotorista extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaMotorista().setVisible(true);
+                new TelaMotorista(null).setVisible(true);
             }
         });
     }

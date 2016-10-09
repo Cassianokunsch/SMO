@@ -41,5 +41,16 @@ Contributor(s):
 -->
 <hibernate-reverse-engineering>
   <schema-selection match-catalog="SMO" match-schema="public"/>
+  <table-filter match-name="caixa"/>
+  <table-filter match-name="localizacao"/>
+  <table-filter match-name="temperatura"/>
+  <table-filter match-name="responsavel"/>
+  <table-filter match-name="orgao"/>
   <table-filter match-name="motorista"/>
+  <table-filter match-name="aparelho"/>
+  <table-filter match-name="usuario"/>
+  <table-filter match-name="transporte"/>
+  <table-filter match-name="transplante"/>
+  <table-filter match-name="receptor"/>
+  <table-filter match-name="doador"/>
 </hibernate-reverse-engineering>

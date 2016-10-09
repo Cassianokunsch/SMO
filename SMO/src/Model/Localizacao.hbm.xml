@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 9, 2016 7:43:42 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Model.Localizacao" table="localizacao" schema="public" optimistic-lock="version">
+        <id name="idlocalizacao" type="string">
+            <column name="idlocalizacao" length="10" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="aparelho" class="Model.Aparelho" fetch="select">
+            <column name="idaparelho" not-null="true" />
+        </many-to-one>
+        <property name="latitude" type="string">
+            <column name="latitude" length="10" />
+        </property>
+        <property name="longitude" type="string">
+            <column name="longitude" length="10" />
+        </property>
+        <property name="horaLoc" type="time">
+            <column name="hora_loc" length="15" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -3,40 +3,37 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <!-- Generated Oct 9, 2016 7:43:42 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="Model.Motorista" table="motorista" schema="public" optimistic-lock="version">
-        <id name="idmotorista" type="int">
-            <column name="idmotorista" />
+    <class name="Model.Responsavel" table="responsavel" schema="public" optimistic-lock="version">
+        <id name="idresponsavel" type="int">
+            <column name="idresponsavel" />
             <generator class="identity" />
         </id>
+        <many-to-one name="usuario" class="Model.Usuario" fetch="select">
+            <column name="idusuario" not-null="true" />
+        </many-to-one>
         <property name="nome" type="string">
             <column name="nome" length="150" />
         </property>
         <property name="cpf" type="string">
             <column name="cpf" length="14" />
         </property>
+        <property name="cep" type="string">
+            <column name="cep" length="9" />
+        </property>
+        <property name="uf" type="string">
+            <column name="uf" length="2" />
+        </property>
         <property name="endereco" type="string">
             <column name="endereco" length="150" />
         </property>
-        <property name="cep" type="string">
-            <column name="cep" length="9" />
+        <property name="telefone" type="string">
+            <column name="telefone" length="15" />
         </property>
         <property name="email" type="string">
             <column name="email" length="100" />
         </property>
         <property name="cidade" type="string">
             <column name="cidade" length="50" />
-        </property>
-        <property name="uf" type="string">
-            <column name="uf" length="2" />
-        </property>
-        <property name="validadeCnh" type="date">
-            <column name="validade_cnh" length="13" />
-        </property>
-        <property name="telefone" type="string">
-            <column name="telefone" length="15" />
-        </property>
-        <property name="cnh" type="string">
-            <column name="cnh" length="13" />
         </property>
         <property name="bairro" type="string">
             <column name="bairro" length="100" />
@@ -47,17 +44,11 @@
         <property name="nascimento" type="date">
             <column name="nascimento" length="13" />
         </property>
-        <set name="caixas" table="caixa" inverse="true" lazy="true" fetch="select">
+        <set name="doadors" table="doador" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="idmotorista" not-null="true" />
+                <column name="idresponsavel" not-null="true" />
             </key>
-            <one-to-many class="Model.Caixa" />
-        </set>
-        <set name="transportes" table="transporte" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="idmotorista" not-null="true" />
-            </key>
-            <one-to-many class="Model.Transporte" />
+            <one-to-many class="Model.Doador" />
         </set>
     </class>
 </hibernate-mapping>

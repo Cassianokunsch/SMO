@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 9, 2016 7:43:42 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Model.Usuario" table="usuario" schema="public" optimistic-lock="version">
+        <id name="idusuario" type="int">
+            <column name="idusuario" />
+            <generator class="identity" />
+        </id>
+        <property name="nome" type="string">
+            <column name="nome" length="150" />
+        </property>
+        <property name="cpf" type="string">
+            <column name="cpf" length="14" />
+        </property>
+        <property name="endereco" type="string">
+            <column name="endereco" length="150" />
+        </property>
+        <property name="telefone" type="string">
+            <column name="telefone" length="15" />
+        </property>
+        <property name="senha" type="string">
+            <column name="senha" length="10" />
+        </property>
+        <property name="rg" type="string">
+            <column name="rg" length="9" />
+        </property>
+        <property name="cep" type="string">
+            <column name="cep" length="9" />
+        </property>
+        <property name="uf" type="string">
+            <column name="uf" length="2" />
+        </property>
+        <property name="cidade" type="string">
+            <column name="cidade" length="50" />
+        </property>
+        <property name="login" type="string">
+            <column name="login" length="15" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="100" />
+        </property>
+        <property name="nascimento" type="date">
+            <column name="nascimento" length="13" />
+        </property>
+        <property name="bairro" type="string">
+            <column name="bairro" length="10" />
+        </property>
+        <set name="transplantes" table="transplante" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idusuario" not-null="true" />
+            </key>
+            <one-to-many class="Model.Transplante" />
+        </set>
+        <set name="orgaos" table="orgao" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idusuario" not-null="true" />
+            </key>
+            <one-to-many class="Model.Orgao" />
+        </set>
+        <set name="responsavels" table="responsavel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idusuario" not-null="true" />
+            </key>
+            <one-to-many class="Model.Responsavel" />
+        </set>
+        <set name="doadors" table="doador" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idusuario" not-null="true" />
+            </key>
+            <one-to-many class="Model.Doador" />
+        </set>
+        <set name="receptors" table="receptor" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idusuario" not-null="true" />
+            </key>
+            <one-to-many class="Model.Receptor" />
+        </set>
+    </class>
+</hibernate-mapping>

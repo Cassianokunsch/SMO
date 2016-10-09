@@ -5,10 +5,7 @@
  */
 package Controle;
 
-import Model.Localizacao;
-import Model.Motorista;
-import Model.Temperatura;
-import Model.Transporte;
+import Model.Usuario;
 import Util.NewHibernateUtil;
 import java.util.List;
 import org.hibernate.HibernateException;
@@ -21,35 +18,37 @@ import org.hibernate.Transaction;
  *
  * @author Cassiano kunsch
  */
-public class ControleMotorista {
-
+public class ControleUsuario {
     //Motorista motorista = new Motorista();
     SessionFactory sessionFactory = NewHibernateUtil.getSessionFactory();
 
-    public void inserir(Motorista motorista) {
+    public void inserir(Usuario usuario) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-        session.save(motorista);
+        session.save(usuario);
         session.getTransaction().commit();
     }
-    public void delete(String idmotorista){
+    public void delete(String idusuario){
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-        String sql = "DELETE FROM MOTORISTA WHERE IDMOTORISTA = '" + idmotorista + "'";
+        String sql = "DELETE FROM USUARIO WHERE IDUSUARIO = '" + idusuario + "'";
         SQLQuery query = session.createSQLQuery(sql);
-        query.addEntity(Motorista.class);
+        query.addEntity(Usuario.class);
         int result = query.executeUpdate();
         System.out.println("Rows affected: " + result);
         session.getTransaction().commit();
     }
-    public List getDados(String idmotorista){
-          Session session = sessionFactory.openSession();
+    public List getDados(String idusuario){
+           Session session = sessionFactory.openSession();
           Transaction tx = null;
           try{
              tx = session.beginTransaction();
-             String sql = "SELECT * FROM MOTORISTA WHERE IDMOTORISTA = '" + idmotorista +"'";
+             String sql = "SELECT * FROM USUARIO WHERE IDUSUARIO = '" + idusuario +"'";
              SQLQuery query = session.createSQLQuery(sql);
-             query.addEntity(Motorista.class);
+             query.addEntity(Usuario.class);
+             //query.addEntity(Transporte.class);
+             //query.addEntity(Temperatura.class);
+             //query.addEntity(Localizacao.class);
              
              List result = query.list();
              tx.commit();
@@ -64,27 +63,27 @@ public class ControleMotorista {
           return null;
     }
     
-    public void update(String stringUpdate, int idmotorista){
+    public void update(String stringUpdate, int idusuario){
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-        String sql = "UPDATE MOTORISTA set " + stringUpdate +
-             " WHERE IDMOTORISTA = '" + idmotorista + "'";
+        String sql = "UPDATE USUARIO set " + stringUpdate +
+             " WHERE IDUSUARIO = '" + idusuario + "'";
         SQLQuery query = session.createSQLQuery(sql);
-        query.addEntity(Motorista.class);
+        query.addEntity(Usuario.class);
         int result = query.executeUpdate();
         System.out.println("Rows affected: " + result);
         session.getTransaction().commit();
     }
     
     /* Method to  READ all the employees using Entity Query */
-   public List listaMotorista( ){
+   public List listaUsuario( ){
       Session session = sessionFactory.openSession();
       Transaction tx = null;
       try{
          tx = session.beginTransaction();
-         String sql = "SELECT * FROM MOTORISTA ORDER BY NOME";
+         String sql = "SELECT * FROM USUARIO ORDER BY NOME";
          SQLQuery query = session.createSQLQuery(sql);
-         query.addEntity(Motorista.class);
+         query.addEntity(Usuario.class);
          List result = query.list();
          tx.commit();
          
@@ -97,4 +96,5 @@ public class ControleMotorista {
       }
       return null;
    }
+    
 }

@@ -5,6 +5,9 @@
  */
 package visao;
 
+import Model.Usuario;
+import visao.TelasCadastro.TelaCadDoador;
+import visao.TelaResponsavel;
 import javax.swing.JPanel;
 
 /**
@@ -17,10 +20,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
      * Creates new form TelaPrincipal
      */
     JPanel cards;
-    
-    public TelaPrincipal() {
+    Usuario usuario;
+    public TelaPrincipal(Usuario user) {
         initComponents();
         this.setTitle("Tela principal");
+        usuario = user;
+        System.out.println(usuario.getNome());
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -193,7 +198,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
-        TelaMotorista motorista = new TelaMotorista();
+        TelaMotorista motorista = new TelaMotorista(usuario);
         motorista.setVisible(true);
         dispose();
     }//GEN-LAST:event_jMenuItem5ActionPerformed
@@ -205,15 +210,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         // TODO add your handling code here:
-        TelaDoador doador = new TelaDoador();
+        TelaCadDoador doador = new TelaCadDoador();
         doador.setVisible(true);
         dispose();
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
-        TelaResponsavel parente = new TelaResponsavel();
-        parente.setVisible(true);
+        TelaResponsavel telaResponsavel = new TelaResponsavel(usuario);
+        telaResponsavel.setVisible(true);
         dispose();
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
@@ -258,7 +263,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaPrincipal().setVisible(true);
+                new TelaPrincipal(null).setVisible(true);
             }
         });
     }

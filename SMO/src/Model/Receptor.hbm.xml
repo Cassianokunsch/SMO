@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 9, 2016 7:43:42 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Model.Receptor" table="receptor" schema="public" optimistic-lock="version">
+        <id name="idreceptor" type="int">
+            <column name="idreceptor" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="usuario" class="Model.Usuario" fetch="select">
+            <column name="idusuario" not-null="true" />
+        </many-to-one>
+        <property name="nome" type="string">
+            <column name="nome" length="150" />
+        </property>
+        <property name="cpf" type="string">
+            <column name="cpf" length="14" />
+        </property>
+        <property name="uf" type="string">
+            <column name="uf" length="2" />
+        </property>
+        <property name="cidade" type="string">
+            <column name="cidade" length="50" />
+        </property>
+        <property name="tipoSanguineo" type="string">
+            <column name="tipo_sanguineo" length="3" />
+        </property>
+        <property name="rg" type="string">
+            <column name="rg" length="9" />
+        </property>
+        <property name="endereco" type="string">
+            <column name="endereco" length="150" />
+        </property>
+        <property name="cep" type="string">
+            <column name="cep" length="9" />
+        </property>
+        <property name="bairro" type="string">
+            <column name="bairro" length="100" />
+        </property>
+        <property name="nascimento" type="date">
+            <column name="nascimento" length="13" />
+        </property>
+        <set name="transplantes" table="transplante" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idreceptor" not-null="true" />
+            </key>
+            <one-to-many class="Model.Transplante" />
+        </set>
+    </class>
+</hibernate-mapping>

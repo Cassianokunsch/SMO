@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 9, 2016 7:43:42 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Model.Aparelho" table="aparelho" schema="public" optimistic-lock="version">
+        <id name="idaparelho" type="int">
+            <column name="idaparelho" />
+            <generator class="identity" />
+        </id>
+        <property name="serie" type="string">
+            <column name="serie" length="10" />
+        </property>
+        <property name="validade" type="date">
+            <column name="validade" length="13" />
+        </property>
+        <property name="modelo" type="string">
+            <column name="modelo" length="30" />
+        </property>
+        <set name="caixas" table="caixa" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idaparelho" not-null="true" />
+            </key>
+            <one-to-many class="Model.Caixa" />
+        </set>
+        <set name="localizacaos" table="localizacao" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idaparelho" not-null="true" />
+            </key>
+            <one-to-many class="Model.Localizacao" />
+        </set>
+        <set name="temperaturas" table="temperatura" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idaparelho" not-null="true" />
+            </key>
+            <one-to-many class="Model.Temperatura" />
+        </set>
+        <set name="transportes" table="transporte" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idaparelho" not-null="true" />
+            </key>
+            <one-to-many class="Model.Transporte" />
+        </set>
+    </class>
+</hibernate-mapping>

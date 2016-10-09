@@ -5,32 +5,32 @@
  */
 package visao.TelasCadastro;
 
-import Controle.ControleMotorista;
-import Model.Motorista;
-import Util.MetodosUteis;
+import Controle.ControleUsuario;
+import Model.Usuario;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import visao.TelaMotorista;
+import visao.TelaUsuario;
 
 /**
  *
- * @author magma
+ * @author Cassiano kunsch
  */
-public class TelaCadMotorista extends javax.swing.JFrame {
-    
-    Motorista motorista = new Motorista();
-    ControleMotorista controle = new ControleMotorista();
+public class TelaCadUsuario extends javax.swing.JFrame {
+
     /**
-     * Creates new form TelaMotorista
+     * Creates new form TelaCadUsuario
      */
-    public TelaCadMotorista() {
+    
+    Usuario usuario = new Usuario();
+    ControleUsuario controle = new ControleUsuario();
+    
+    public TelaCadUsuario() {
         initComponents();
-        this.setTitle("Cadastro Motorista");
-    } 
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -41,9 +41,7 @@ public class TelaCadMotorista extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jToggleButton1 = new javax.swing.JToggleButton();
-        jButtonCadMoto = new javax.swing.JButton();
-        jButtonVoltarMoto = new javax.swing.JButton();
+        jPasswordField2 = new javax.swing.JPasswordField();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jTextFieldNome = new javax.swing.JTextField();
@@ -67,28 +65,18 @@ public class TelaCadMotorista extends javax.swing.JFrame {
         jTextFieldCep = new javax.swing.JFormattedTextField();
         jTextFieldTelefone = new javax.swing.JFormattedTextField();
         jTextFieldNascimento = new javax.swing.JFormattedTextField();
-        jTextFieldValidadeCnh = new javax.swing.JFormattedTextField();
         jLabel12 = new javax.swing.JLabel();
         jTextFieldRg = new javax.swing.JFormattedTextField();
-        jTextFieldCnh = new javax.swing.JFormattedTextField();
+        jLabel14 = new javax.swing.JLabel();
+        jPasswordFieldSenha = new javax.swing.JPasswordField();
+        jPasswordFieldConfirmarSenha = new javax.swing.JPasswordField();
+        jTextFieldLogin = new javax.swing.JTextField();
+        jButtonVoltarMoto = new javax.swing.JButton();
+        jButtonCadMoto = new javax.swing.JButton();
 
-        jToggleButton1.setText("jToggleButton1");
+        jPasswordField2.setText("jPasswordField2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jButtonCadMoto.setText("Cadastrar");
-        jButtonCadMoto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCadMotoActionPerformed(evt);
-            }
-        });
-
-        jButtonVoltarMoto.setText("Voltar");
-        jButtonVoltarMoto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonVoltarMotoActionPerformed(evt);
-            }
-        });
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
@@ -125,10 +113,10 @@ public class TelaCadMotorista extends javax.swing.JFrame {
         jLabel13.setText("UF:");
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel10.setText("CNH:");
+        jLabel10.setText("Login:");
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel11.setText("Validade CHN:");
+        jLabel11.setText("Senha:");
 
         try {
             jTextFieldCpf.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
@@ -159,12 +147,6 @@ public class TelaCadMotorista extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
-        try {
-            jTextFieldValidadeCnh.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel12.setText("Registro Geral");
 
@@ -174,11 +156,8 @@ public class TelaCadMotorista extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
-        try {
-            jTextFieldCnh.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#############")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
+        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel14.setText("Confirmar Senha:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -230,17 +209,24 @@ public class TelaCadMotorista extends javax.swing.JFrame {
                                 .addComponent(jLabel7)
                                 .addComponent(jTextFieldNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel4))))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                            .addComponent(jTextFieldCnh, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextFieldValidadeCnh, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                            .addGap(3, 3, 3)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(119, 119, 119)
-                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jTextFieldLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(116, 116, 116)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPasswordFieldSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel14)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jPasswordFieldConfirmarSenha))))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -295,17 +281,31 @@ public class TelaCadMotorista extends javax.swing.JFrame {
                     .addComponent(jTextFieldTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel10)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextFieldValidadeCnh, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldCnh, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel11)
-                        .addGap(26, 26, 26)))
+                    .addComponent(jLabel10)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel14)
+                        .addComponent(jLabel11)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jPasswordFieldSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPasswordFieldConfirmarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18))
         );
+
+        jButtonVoltarMoto.setText("Voltar");
+        jButtonVoltarMoto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVoltarMotoActionPerformed(evt);
+            }
+        });
+
+        jButtonCadMoto.setText("Cadastrar");
+        jButtonCadMoto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCadMotoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -313,52 +313,47 @@ public class TelaCadMotorista extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButtonCadMoto)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButtonVoltarMoto, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonCadMoto)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonVoltarMoto, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonVoltarMoto)
                     .addComponent(jButtonCadMoto))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getAccessibleContext().setAccessibleName("casa");
-
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButtonVoltarMotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarMotoActionPerformed
-        // TODO add your handling code here:
-        TelaMotorista telaMotorista = new TelaMotorista();
-        telaMotorista.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_jButtonVoltarMotoActionPerformed
 
     private void jTextFieldTelefoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTelefoneActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldTelefoneActionPerformed
 
+    private void jButtonVoltarMotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarMotoActionPerformed
+//        // TODO add your handling code here:
+//        TelaMotorista telaMotorista = new TelaMotorista();
+//        telaMotorista.setVisible(true);
+//        dispose();
+    }//GEN-LAST:event_jButtonVoltarMotoActionPerformed
+
     private void jButtonCadMotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadMotoActionPerformed
-        
         if (verificaCampos()){
-            controle.inserir(criaMotorista());
-            JOptionPane.showMessageDialog(null, "Motorista cadastrado!!!");
-            TelaMotorista telaMotorista = new TelaMotorista();
-            telaMotorista.setVisible(true);
+            controle.inserir(criaUsuario());
+            JOptionPane.showMessageDialog(null, "Usuario cadastrado!!!");
+            TelaUsuario telaUsuario = new TelaUsuario();
+            telaUsuario.setVisible(true);
             dispose();
         }else{
             JOptionPane.showMessageDialog(null, "Todos os campos são obrigatorios!!!");
@@ -371,7 +366,7 @@ public class TelaCadMotorista extends javax.swing.JFrame {
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+        /* If Nimbus (introduced in Java SE 6) is not avajPasswordFieldSenhath the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
@@ -382,63 +377,22 @@ public class TelaCadMotorista extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaCadMotorista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCadUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaCadMotorista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCadUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaCadMotorista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCadUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaCadMotorista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCadUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaCadMotorista().setVisible(true);
+                new TelaCadUsuario().setVisible(true);
             }
         });
-    }
-    
-    public boolean verificaCampos(){
-        if (!"".equals(jTextFieldEndereco.getText()) &&
-            !"".equals(jTextFieldCep.getText()) &&
-            !"".equals(jTextFieldNome.getText()) &&
-            !"".equals(jTextFieldEmail.getText()) && 
-            !"".equals(jTextFieldCpf.getText()) &&
-            !"".equals(jTextFieldCidade.getText()) &&
-            !"".equals(jTextFieldTelefone.getText()) && 
-            !"".equals(jTextFieldCnh.getText()) &&
-            !"".equals(jTextFieldBairro.getText()) &&
-            !"".equals(jTextFieldRg.getText()) &&
-            !"".equals(jTextFieldNascimento.getText()) &&
-            !"".equals(jTextFieldValidadeCnh.getText())){
-            return true;
-        }else{
-            return false;
-        }
-    }
-    
-    public Motorista criaMotorista(){
-        motorista.setEndereco(jTextFieldEndereco.getText());
-        motorista.setCep(jTextFieldCep.getText());
-        motorista.setNome(jTextFieldNome.getText());
-        motorista.setEmail(jTextFieldEmail.getText());
-        motorista.setCpf(jTextFieldCpf.getText());
-        motorista.setCidade(jTextFieldCidade.getText());
-        motorista.setUf(String.valueOf(jComboBoxUf.getSelectedItem()));
-        motorista.setTelefone(jTextFieldTelefone.getText());
-        motorista.setCnh(jTextFieldCnh.getText());
-        motorista.setBairro(jTextFieldBairro.getText());
-        motorista.setRg(jTextFieldRg.getText());
-        try {
-            motorista.setNascimento(MetodosUteis.formataData(jTextFieldNascimento.getText()));
-            motorista.setValidadeCnh(MetodosUteis.formataData(jTextFieldValidadeCnh.getText()));
-        } catch (Exception ex) {
-            Logger.getLogger(TelaCadMotorista.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return motorista;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -450,6 +404,7 @@ public class TelaCadMotorista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -459,18 +414,82 @@ public class TelaCadMotorista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPasswordField jPasswordField2;
+    private javax.swing.JPasswordField jPasswordFieldConfirmarSenha;
+    private javax.swing.JPasswordField jPasswordFieldSenha;
     private javax.swing.JTextField jTextFieldBairro;
     private javax.swing.JFormattedTextField jTextFieldCep;
     private javax.swing.JTextField jTextFieldCidade;
-    private javax.swing.JFormattedTextField jTextFieldCnh;
     private javax.swing.JFormattedTextField jTextFieldCpf;
     private javax.swing.JTextField jTextFieldEmail;
     private javax.swing.JTextField jTextFieldEndereco;
+    private javax.swing.JTextField jTextFieldLogin;
     private javax.swing.JFormattedTextField jTextFieldNascimento;
     private javax.swing.JTextField jTextFieldNome;
     private javax.swing.JFormattedTextField jTextFieldRg;
     private javax.swing.JFormattedTextField jTextFieldTelefone;
-    private javax.swing.JFormattedTextField jTextFieldValidadeCnh;
-    private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
+    
+    public boolean verificaCampos(){
+        if (!"".equals(jTextFieldEndereco.getText()) &&
+            !"".equals(jTextFieldCep.getText()) &&
+            !"".equals(jTextFieldNome.getText()) &&
+            !"".equals(jTextFieldEmail.getText()) && 
+            !"".equals(jTextFieldCpf.getText()) &&
+            !"".equals(jTextFieldCidade.getText()) &&
+            !"".equals(jTextFieldTelefone.getText()) &&
+            !"".equals(jTextFieldBairro.getText()) &&
+            !"".equals(jTextFieldRg.getText()) &&
+            !"".equals(jTextFieldNascimento.getText()) &&
+            !"".equals(jTextFieldLogin.getText()) &&
+            !"".equals(String.valueOf(jPasswordFieldSenha.getPassword())) &&
+            !"".equals(String.valueOf(jPasswordFieldConfirmarSenha.getPassword())) &&
+            verificaSenha()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    
+    private boolean verificaSenha(){
+        String senha = new String (jPasswordFieldSenha.getPassword());
+        String confirmaSenha = new String (jPasswordFieldConfirmarSenha.getPassword());
+        if (senha.equals(confirmaSenha)){
+            return true;
+        }else{
+            JOptionPane.showMessageDialog(null, "As senhas divergem!!!");
+            return false;
+        }
+    }
+    public static java.sql.Date formataData(String data) throws Exception {
+        java.sql.Date date = null;
+     try {
+         DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+         date = new java.sql.Date( ((java.util.Date)formatter.parse(data)).getTime() );
+     } catch (ParseException e) {            
+         throw e;
+     }
+     return date;
+    }
+    
+    public Usuario criaUsuario(){
+        usuario.setEndereco(jTextFieldEndereco.getText());
+        usuario.setCep(jTextFieldCep.getText());
+        usuario.setNome(jTextFieldNome.getText());
+        usuario.setEmail(jTextFieldEmail.getText());
+        usuario.setCpf(jTextFieldCpf.getText());
+        usuario.setCidade(jTextFieldCidade.getText());
+        usuario.setUf(String.valueOf(jComboBoxUf.getSelectedItem()));
+        usuario.setTelefone(jTextFieldTelefone.getText());
+        usuario.setBairro(jTextFieldBairro.getText());
+        usuario.setRg(jTextFieldRg.getText());
+        usuario.setLogin(jTextFieldLogin.getText());
+        usuario.setSenha(String.valueOf(jPasswordFieldSenha.getPassword()));
+        try {
+            usuario.setNascimento(formataData(jTextFieldNascimento.getText()));
+        } catch (Exception ex) {
+            Logger.getLogger(TelaCadMotorista.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return usuario;
+    }
 }

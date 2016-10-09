@@ -5,6 +5,10 @@
  */
 package visao;
 
+import Controle.ControleLogin;
+import Model.Usuario;
+import java.util.Iterator;
+import java.util.List;
 import javax.swing.JOptionPane;
 
 /**
@@ -16,6 +20,10 @@ public class TelaLogin extends javax.swing.JFrame {
     /**
      * Creates new form TelaLogin
      */
+    
+    ControleLogin controle = new ControleLogin();
+    Usuario user;
+    
     public TelaLogin() {
         initComponents();
         this.setTitle("Tela de Login");
@@ -94,8 +102,8 @@ public class TelaLogin extends javax.swing.JFrame {
 
     private void acessarLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acessarLoginActionPerformed
         // QUANDO O USUÁRIO E A SENHA ESTIVEREM CORRETAS ENTRA
-        if (jUsuario.getText().equals("admin") && jPassword.getText().equals("casa")){
-            TelaPrincipal tela = new TelaPrincipal();
+        if(verificaLogin()){
+            TelaPrincipal tela = new TelaPrincipal(user);
             tela.setVisible(true);
             dispose();
         }else{
@@ -152,4 +160,16 @@ public class TelaLogin extends javax.swing.JFrame {
     private javax.swing.JTextField jUsuario;
     private javax.swing.JButton sairLogin;
     // End of variables declaration//GEN-END:variables
+    
+    private boolean verificaLogin(){
+        List result = controle.findUser(jUsuario.getText());
+        Iterator iterator = result.iterator();
+        if(iterator.hasNext()){
+            user = (Usuario) iterator.next();
+            if(user.getSenha().equals(String.valueOf(jPassword.getPassword()))){
+                return true;
+            }
+        }
+        return false;
+    }
 }

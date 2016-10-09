@@ -5,19 +5,30 @@
  */
 package visao;
 
-import visao.TelasCadastro.TelaCadDoador;
+import Controle.ControleUsuario;
+import Model.Usuario;
+import Util.TabelaUsuario;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import javax.swing.JOptionPane;
+import javax.swing.ListSelectionModel;
+import visao.TelasCadastro.TelaCadUsuario;
+import visao.TelasUpdate.TelaUpdateUsuario;
 
 /**
  *
  * @author Cassiano kunsch
  */
-public class TelaDoador extends javax.swing.JFrame {
+public class TelaUsuario extends javax.swing.JFrame {
 
     /**
-     * Creates new form TelaDoador
+     * Creates new form TelaUsuario
      */
-    public TelaDoador() {
+    ControleUsuario controle = new ControleUsuario();
+    public TelaUsuario() {
         initComponents();
+        atualiza();
     }
 
     /**
@@ -35,7 +46,7 @@ public class TelaDoador extends javax.swing.JFrame {
         jButtonPesquisar = new javax.swing.JButton();
         jButtonAtualiza = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTableMotoristas = new javax.swing.JTable();
+        jTableUsuario = new javax.swing.JTable();
         jButtonCadastrar = new javax.swing.JButton();
         jButtonEditar = new javax.swing.JButton();
         jButtonExcluir = new javax.swing.JButton();
@@ -43,7 +54,7 @@ public class TelaDoador extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Doador"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Usuario"));
 
         jLabel1.setText("Nome:");
 
@@ -61,7 +72,7 @@ public class TelaDoador extends javax.swing.JFrame {
             }
         });
 
-        jTableMotoristas.setModel(new javax.swing.table.DefaultTableModel(
+        jTableUsuario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
                 {},
@@ -73,7 +84,7 @@ public class TelaDoador extends javax.swing.JFrame {
 
             }
         ));
-        jScrollPane2.setViewportView(jTableMotoristas);
+        jScrollPane2.setViewportView(jTableUsuario);
 
         jButtonCadastrar.setText("Cadastrar");
         jButtonCadastrar.addActionListener(new java.awt.event.ActionListener() {
@@ -117,7 +128,7 @@ public class TelaDoador extends javax.swing.JFrame {
                         .addComponent(jButtonPesquisar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonAtualiza)
-                        .addGap(0, 261, Short.MAX_VALUE))
+                        .addGap(0, 363, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jScrollPane2)))
@@ -189,34 +200,34 @@ public class TelaDoador extends javax.swing.JFrame {
 
     private void jButtonAtualizaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtualizaActionPerformed
         // TODO add your handling code here:
-        //atualiza();
+        atualiza();
     }//GEN-LAST:event_jButtonAtualizaActionPerformed
 
     private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarActionPerformed
-        TelaCadDoador cadDoador = new TelaCadDoador();
-        cadDoador.setVisible(true);
+        TelaCadUsuario cadUsuario = new TelaCadUsuario();
+        cadUsuario.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButtonCadastrarActionPerformed
 
     private void jButtonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditarActionPerformed
-//        String id = String.valueOf(jTableMotoristas.getModel().getValueAt(jTableMotoristas.getSelectedRow(), 0));
-//        List result = controle.getDados(id);
-//        TelaUpdateMotorista telaUpdateMotorista = new TelaUpdateMotorista(result);
-//        telaUpdateMotorista.setVisible(true);
-//        dispose();
+        String id = String.valueOf(jTableUsuario.getModel().getValueAt(jTableUsuario.getSelectedRow(), 0));
+        List result = controle.getDados(id);
+        TelaUpdateUsuario telaUpdateUsuario = new TelaUpdateUsuario(result);
+        telaUpdateUsuario.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButtonEditarActionPerformed
 
     private void jButtonExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExcluirActionPerformed
-//        if (jTableMotoristas.getSelectedRow() >= 0) {
-//            int dialogButton = JOptionPane.YES_NO_OPTION;
-//            int dialogResult = JOptionPane.showConfirmDialog (null, "Tem certeza que quer excluir esse motorista?","Warning",dialogButton);
-//            if(dialogResult == JOptionPane.YES_OPTION){
-//                String id = String.valueOf(jTableMotoristas.getModel().getValueAt(jTableMotoristas.getSelectedRow(), 0));
-//                controle.delete(id);
-//                JOptionPane.showMessageDialog(null, "Motorista Excluido com sucesso!");
-//                atualiza();
-//            }
-//        }
+        if (jTableUsuario.getSelectedRow() >= 0) {
+            int dialogButton = JOptionPane.YES_NO_OPTION;
+            int dialogResult = JOptionPane.showConfirmDialog (null, "Tem certeza que quer excluir esse usuário?","Warning",dialogButton);
+            if(dialogResult == JOptionPane.YES_OPTION){
+                String id = String.valueOf(jTableUsuario.getModel().getValueAt(jTableUsuario.getSelectedRow(), 0));
+                controle.delete(id);
+                JOptionPane.showMessageDialog(null, "Usuário excluido com sucesso!");
+                atualiza();
+            }
+        }
     }//GEN-LAST:event_jButtonExcluirActionPerformed
 
     private void jButtonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarActionPerformed
@@ -243,20 +254,20 @@ public class TelaDoador extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaDoador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaDoador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaDoador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaDoador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaDoador().setVisible(true);
+                new TelaUsuario().setVisible(true);
             }
         });
     }
@@ -271,7 +282,27 @@ public class TelaDoador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTableMotoristas;
+    private javax.swing.JTable jTableUsuario;
     private javax.swing.JTextField jTextFieldNomePesquisa;
     // End of variables declaration//GEN-END:variables
+
+    private void atualiza() {
+        ArrayList dados = new ArrayList();
+        String [] colunas = new String[]{"ID", "Nome", "Login","Endereço", "CEP",
+            "Email", "CPF", "Cidade", "UF", "Telefone",
+            "Bairro", "RG", "Nascimento"};
+        List result = controle.listaUsuario();
+        for (Iterator iterator = result.iterator(); iterator.hasNext();) {
+            Usuario usuario = (Usuario) iterator.next();
+            dados.add(new Object[]{usuario.getIdusuario(), usuario.getNome(),
+                usuario.getLogin(), usuario.getEndereco(), usuario.getCep(), usuario.getEmail(),
+                usuario.getCpf(), usuario.getCidade(), usuario.getUf(),
+                usuario.getTelefone(), usuario.getBairro(),
+                usuario.getRg(), usuario.getNascimento()});
+        }
+        TabelaUsuario tabela = new TabelaUsuario(dados, colunas);
+        jTableUsuario.setModel(tabela);
+        jTableUsuario.getTableHeader().setReorderingAllowed(false);
+        jTableUsuario.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+    }
 }
