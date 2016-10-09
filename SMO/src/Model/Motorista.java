@@ -1,5 +1,5 @@
 package Model;
-// Generated Oct 8, 2016 3:51:22 AM by Hibernate Tools 4.3.1
+// Generated Oct 8, 2016 8:02:23 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -10,47 +10,65 @@ import java.util.Date;
 public class Motorista  implements java.io.Serializable {
 
 
-     private int id;
-     private String nome;
-     private String cpf;
-     private String rg;
-     private Date nascimento;
+     private int idmotorista;
      private String endereco;
+     private String cep;
+     private String nome;
+     private String email;
+     private String cpf;
      private String cidade;
      private String uf;
-     private String email;
+     private Date validadeCnh;
      private String telefone;
-     private Integer cnh;
-     private Date validadecnh;
+     private String cnh;
+     private String bairro;
+     private String rg;
+     private Date nascimento;
 
     public Motorista() {
     }
-
-	
-    public Motorista(int id) {
-        this.id = id;
+    
+    public Motorista(int idmotorista) {
+        this.idmotorista = idmotorista;
     }
-    public Motorista(int id, String nome, String cpf, String rg, Date nascimento, String endereco, String cidade, String uf, String email, String telefone, Integer cnh, Date validadecnh) {
-       this.id = id;
-       this.nome = nome;
-       this.cpf = cpf;
-       this.rg = rg;
-       this.nascimento = nascimento;
+
+    public Motorista(int idmotorista, String endereco, String cep, String nome, String email, String cpf, String cidade, String uf, Date validadeCnh, String telefone, String cnh, String bairro, String rg, Date nascimento) {
+       this.idmotorista = idmotorista;
        this.endereco = endereco;
+       this.cep = cep;
+       this.nome = nome;
+       this.email = email;
+       this.cpf = cpf;
        this.cidade = cidade;
        this.uf = uf;
-       this.email = email;
+       this.validadeCnh = validadeCnh;
        this.telefone = telefone;
        this.cnh = cnh;
-       this.validadecnh = validadecnh;
+       this.bairro = bairro;
+       this.rg = rg;
+       this.nascimento = nascimento;
     }
    
-    public int getId() {
-        return this.id;
+    public int getIdmotorista() {
+        return this.idmotorista;
     }
     
-    public void setId(int id) {
-        this.id = id;
+    public void setIdmotorista(int idmotorista) {
+        this.idmotorista = idmotorista;
+    }
+    public String getEndereco() {
+        return this.endereco;
+    }
+    
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+    public String getCep() {
+        return this.cep;
+    }
+    
+    public void setCep(String cep) {
+        this.cep = cep;
     }
     public String getNome() {
         return this.nome;
@@ -59,33 +77,19 @@ public class Motorista  implements java.io.Serializable {
     public void setNome(String nome) {
         this.nome = nome;
     }
+    public String getEmail() {
+        return this.email;
+    }
+    
+    public void setEmail(String email) {
+        this.email = email;
+    }
     public String getCpf() {
         return this.cpf;
     }
     
     public void setCpf(String cpf) {
         this.cpf = cpf;
-    }
-    public String getRg() {
-        return this.rg;
-    }
-    
-    public void setRg(String rg) {
-        this.rg = rg;
-    }
-    public Date getNascimento() {
-        return this.nascimento;
-    }
-    
-    public void setNascimento(Date nascimento) {
-        this.nascimento = nascimento;
-    }
-    public String getEndereco() {
-        return this.endereco;
-    }
-    
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
     }
     public String getCidade() {
         return this.cidade;
@@ -101,12 +105,12 @@ public class Motorista  implements java.io.Serializable {
     public void setUf(String uf) {
         this.uf = uf;
     }
-    public String getEmail() {
-        return this.email;
+    public Date getValidadeCnh() {
+        return this.validadeCnh;
     }
     
-    public void setEmail(String email) {
-        this.email = email;
+    public void setValidadeCnh(Date validadeChn) {
+        this.validadeCnh = validadeChn;
     }
     public String getTelefone() {
         return this.telefone;
@@ -115,19 +119,34 @@ public class Motorista  implements java.io.Serializable {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
-    public Integer getCnh() {
+    public String getCnh() {
         return this.cnh;
     }
     
-    public void setCnh(Integer cnh) {
+    public void setCnh(String cnh) {
         this.cnh = cnh;
     }
-    public Date getValidadecnh() {
-        return this.validadecnh;
+    public String getBairro() {
+        return this.bairro;
     }
     
-    public void setValidadecnh(Date validadecnh) {
-        this.validadecnh = validadecnh;
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+    public String getRg() {
+        return this.rg;
+    }
+    
+    public void setRg(String rg) {
+        this.rg = rg;
+    }
+    
+        public Date getNascimento() {
+        return nascimento;
+    }
+
+    public void setNascimento(Date nascimento) {
+        this.nascimento = nascimento;
     }
 
 
