@@ -50,5 +50,5 @@ Hoje no estado do Espirito Santo<br>
 ###5 DIAGRAMA DE CLASSE
 
 ![Alt text](https://github.com/discipbd1/trab01/blob/master/balsamiq.png?raw=true "Title")
-
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Class%20Diagram0.jpg "Title")
 
