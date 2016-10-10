@@ -13,14 +13,19 @@ Este documento contém a especificação do projeto do banco de dados <nome do p
 Hoje no estado do Espirito Santo<br>
 
 ###4    REQUISITOS DE USUÁRIO<br>
-| ID   | Descrição                                                 | Prioridade  |
+
+#### H4 REQUISITOS FUNCIONAIS
+|  ID  | Descrição                                                 |  Prioridade |
 | -----|:---------------------------------------------------------:| -----------:|
 | RF01 | O usuário deve conseguir realizar um CRUD de usuário      |     Alta    |
-| RF01 | O usuário deve consegui realizar um CRUD de motorista     |     Alta    |
-| RF01 | O usuário deve consegui realizar um CRUD de aparelho      |     Alta    |
-| RF01 | O usuário deve consegui realizar um CRUD de doador        |     Alta    |
-| RF01 | O usuário deve consegui realizar um CRUD de caixa         |     Alta    |
-| RF01 | O usuário deve consegui realizar um CRUD de responsavel   |     Alta    |
-| RF01 | O usuário deve consegui realizar um CRUD de receptor      |     Alta    |
-| RF01 | O usuário deve consegui realizar um CRUD de transporte    |     Alta    |
-| RF01 | O usuário deve consegui realizar um CRUD de transplante   |     Alta    |
+| RF02 | O usuário deve consegui realizar um CRUD de motorista     |     Alta    |
+| RF03 | O usuário deve consegui realizar um CRUD de aparelho      |     Alta    |
+| RF04 | O usuário deve consegui realizar um CRUD de doador        |     Alta    |
+| RF05 | O usuário deve consegui realizar um CRUD de caixa         |     Alta    |
+| RF06 | O usuário deve consegui realizar um CRUD de responsavel   |     Alta    |
+| RF07 | O usuário deve consegui realizar um CRUD de receptor      |     Alta    |
+| RF08 | O usuário deve consegui realizar um CRUD de transporte    |     Alta    |
+| RF09 | O usuário deve consegui realizar um CRUD de transplante   |     Alta    |
+| RF10 | O usuário deve consegui gerar um relatório                |     Alta    |
+| RF11 | O usuário deve consegui monitorar um orgão                |     Alta    |
+
