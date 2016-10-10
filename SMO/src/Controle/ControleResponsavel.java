@@ -46,10 +46,8 @@ public class ControleResponsavel {
              String sql = "SELECT * FROM RESPONSAVEL WHERE IDRESPONSAVEL = '" + idresponsavel +"'";
              SQLQuery query = session.createSQLQuery(sql);
              query.addEntity(Responsavel.class);
-             
              List result = query.list();
              tx.commit();
-
              return result;
           }catch (HibernateException e) {
              if (tx!=null) tx.rollback();
@@ -72,7 +70,6 @@ public class ControleResponsavel {
         session.getTransaction().commit();
     }
     
-    /* Method to  READ all the employees using Entity Query */
    public List listaResponsavel( ){
       Session session = sessionFactory.openSession();
       Transaction tx = null;
@@ -83,7 +80,6 @@ public class ControleResponsavel {
          query.addEntity(Responsavel.class);
          List result = query.list();
          tx.commit();
-         
          return result;
       }catch (HibernateException e) {
          if (tx!=null) tx.rollback();

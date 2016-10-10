@@ -19,7 +19,6 @@ import org.hibernate.Transaction;
  * @author Cassiano kunsch
  */
 public class ControleUsuario {
-    //Motorista motorista = new Motorista();
     SessionFactory sessionFactory = NewHibernateUtil.getSessionFactory();
 
     public void inserir(Usuario usuario) {
@@ -45,14 +44,9 @@ public class ControleUsuario {
              tx = session.beginTransaction();
              String sql = "SELECT * FROM USUARIO WHERE IDUSUARIO = '" + idusuario +"'";
              SQLQuery query = session.createSQLQuery(sql);
-             query.addEntity(Usuario.class);
-             //query.addEntity(Transporte.class);
-             //query.addEntity(Temperatura.class);
-             //query.addEntity(Localizacao.class);
-             
+             query.addEntity(Usuario.class);             
              List result = query.list();
              tx.commit();
-
              return result;
           }catch (HibernateException e) {
              if (tx!=null) tx.rollback();
@@ -75,7 +69,6 @@ public class ControleUsuario {
         session.getTransaction().commit();
     }
     
-    /* Method to  READ all the employees using Entity Query */
    public List listaUsuario( ){
       Session session = sessionFactory.openSession();
       Transaction tx = null;
@@ -86,7 +79,6 @@ public class ControleUsuario {
          query.addEntity(Usuario.class);
          List result = query.list();
          tx.commit();
-         
          return result;
       }catch (HibernateException e) {
          if (tx!=null) tx.rollback();
