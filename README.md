@@ -30,11 +30,11 @@ Hoje no estado do Espirito Santo<br>
 | RF11 | O usuário deve consegui monitorar um orgão                |     Alta    |
 
 ####4.2 REQUISITOS NÃO - FUNCIONAIS
-|  ID  | Descrição                                                                 |  Prioridade |    Categoria    |  Escopo |
-| -----|:-------------------------------------------------------------------------:| -----------:|-----------------:---------:
-| RNF01 | Oferecer ao usuário uma interface intuitiva e de fácil compreensão       |     Alta    |                 |         |
-| RNF02 | A aplicação deve ser desenvolvido na linguagem Java                      |     Alta    | Manutebilidade  | Sistema |
-| RNF03 | A aplicação tem que oferecer conexão com o banco de dados                |     Alta    |                 | Sistema |
+|  ID   | Descrição                                                                 |  Prioridade |    Categoria    |  Escopo |
+| ----- |:-------------------------------------------------------------------------:| :----------:|:---------------:|--------:|
+| RNF01 | Oferecer ao usuário uma interface intuitiva e de fácil compreensão        |     Alta    |                 |         |
+| RNF02 | A aplicação deve ser desenvolvido na linguagem Java                       |     Alta    | Manutebilidade  | Sistema |
+| RNF03 | A aplicação tem que oferecer conexão com o banco de dados                 |     Alta    |                 | Sistema |
 
 
 
