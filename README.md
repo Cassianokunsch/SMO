@@ -33,8 +33,18 @@ Hoje no estado do Espirito Santo<br>
 |  ID   | Descrição                                                                 |  Prioridade |    Categoria    |  Escopo |
 | ----- |:-------------------------------------------------------------------------:| :----------:|:---------------:|--------:|
 | RNF01 | Oferecer ao usuário uma interface intuitiva e de fácil compreensão        |     Alta    |                 |         |
-| RNF02 | A aplicação deve ser desenvolvido na linguagem Java                       |     Alta    | Manutebilidade  | Sistema |
+| RNF02 | A aplicação deve ser desenvolvida na linguagem Java                       |     Alta    | Manutebilidade  | Sistema |
 | RNF03 | A aplicação tem que oferecer conexão com o banco de dados                 |     Alta    |                 | Sistema |
 
+####4.3 REGRAS DE NEGÓCIO
+|  ID  | Descrição                                                                                      |  Prioridade |
+| -----|:----------------------------------------------------------------------------------------------:| -----------:|
+| RN01 | O usuário só pode acessar o sistema se estiver cadastrado                                      |     Alta    |
+| RN02 | Toda ação alteração feita no sistema deve-se guardar o usuário                                 |     Alta    |
+| RN03 | Um doador só poderá ser cadastrado se tiver um responsável por ele                             |     Alta    |
+| RN04 | Um orgão só poderá ser cadastrado se tiver um doador relacionado a ele                         |     Alta    |
+| RN05 | Um transplante só poderá ser criado se tiver um orgão e um receptor relacionados a ele         |     Alta    |
+| RN06 | Um transporte só poderá ser criado se tiver uma caixa e um motorista relacionados a ele        |     Alta    |
+| RN07 | Toda ação que for realizada no sistema deve-se guardar o usuário                               |     Alta    |
 
 
