@@ -47,4 +47,8 @@ Hoje no estado do Espirito Santo<br>
 | RN06 | Um transporte só poderá ser criado se tiver uma caixa e um motorista relacionados a ele        |     Alta    |
 | RN07 | Toda ação que for realizada no sistema deve-se guardar o usuário                               |     Alta    |
 
+###5 DIAGRAMA DE CLASSE
+
+![Alt text](https://github.com/discipbd1/trab01/blob/master/balsamiq.png?raw=true "Title")
+
 
