@@ -7,6 +7,7 @@ package visao.TelasUpdate;
 
 import Controle.ControleMotorista;
 import Model.Motorista;
+import Model.Usuario;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -27,10 +28,12 @@ public class TelaUpdateMotorista extends javax.swing.JFrame {
      */
     ControleMotorista controle  = new ControleMotorista();
     Motorista motorista;
+    Usuario usuario;
     
-    public TelaUpdateMotorista(List result) {
+    public TelaUpdateMotorista(Usuario user, List result) {
         initComponents();
         motorista = (Motorista) result.get(0);
+        usuario = user;
         setCampos();
     }
 
@@ -344,7 +347,7 @@ public class TelaUpdateMotorista extends javax.swing.JFrame {
 
     private void jButtonVoltarMotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarMotoActionPerformed
         // TODO add your handling code here:
-        TelaMotorista telaMotorista = new TelaMotorista();
+        TelaMotorista telaMotorista = new TelaMotorista(usuario);
         telaMotorista.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButtonVoltarMotoActionPerformed
@@ -357,7 +360,7 @@ public class TelaUpdateMotorista extends javax.swing.JFrame {
             }else{
                 JOptionPane.showMessageDialog(null, "Nenhum dado alterado!");
             }
-            TelaMotorista telaMotorista = new TelaMotorista();
+            TelaMotorista telaMotorista = new TelaMotorista(usuario);
             telaMotorista.setVisible(true);
             dispose();
         }else{
@@ -509,7 +512,7 @@ public class TelaUpdateMotorista extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaUpdateMotorista(null).setVisible(true);
+                new TelaUpdateMotorista(null, null).setVisible(true);
             }
         });
     }

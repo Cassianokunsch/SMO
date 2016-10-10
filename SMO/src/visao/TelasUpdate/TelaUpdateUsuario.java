@@ -25,10 +25,12 @@ public class TelaUpdateUsuario extends javax.swing.JFrame {
     
     ControleUsuario controle  = new ControleUsuario();
     Usuario usuario;
+    Usuario usuario2;
     
-    public TelaUpdateUsuario(List result) {
+    public TelaUpdateUsuario(Usuario user, List result) {
         initComponents();
         usuario = (Usuario) result.get(0);
+        usuario2 = user;
         setCampos();
     }
 
@@ -349,7 +351,7 @@ public class TelaUpdateUsuario extends javax.swing.JFrame {
             }else{
                 JOptionPane.showMessageDialog(null, "Nenhum dado alterado!");
             }
-            TelaUsuario telaUsuario = new TelaUsuario();
+            TelaUsuario telaUsuario = new TelaUsuario(usuario2);
             telaUsuario.setVisible(true);
             dispose();
         }else{
@@ -359,7 +361,7 @@ public class TelaUpdateUsuario extends javax.swing.JFrame {
 
     private void jButtonVoltarMotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarMotoActionPerformed
         // TODO add your handling code here:
-        TelaUsuario telaUsuario = new TelaUsuario();
+        TelaUsuario telaUsuario = new TelaUsuario(usuario2);
         telaUsuario.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButtonVoltarMotoActionPerformed
@@ -394,7 +396,7 @@ public class TelaUpdateUsuario extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaUpdateUsuario(null).setVisible(true);
+                new TelaUpdateUsuario(null, null).setVisible(true);
             }
         });
     }

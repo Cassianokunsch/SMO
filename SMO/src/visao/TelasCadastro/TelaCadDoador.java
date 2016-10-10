@@ -6,15 +6,19 @@
 package visao.TelasCadastro;
 
 import Controle.ControleDoador;
+import Controle.ControleResponsavel;
 import Model.Doador;
-import java.sql.Time;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import Model.Responsavel;
+import Model.Usuario;
+import Util.MetodosUteis;
+import Util.TabelaDados;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.ListSelectionModel;
 import visao.TelaDoador;
 import visao.TelaPrincipal;
 
@@ -29,9 +33,14 @@ public class TelaCadDoador extends javax.swing.JFrame {
      */
     Doador doador = new Doador();
     ControleDoador controle = new ControleDoador();
-    public TelaCadDoador() {
+    ControleResponsavel controleResponsavel = new ControleResponsavel();
+    Usuario usuario;
+    
+    public TelaCadDoador(Usuario user) {
         initComponents();
+        atualiza();
         this.setTitle("Cadastro Doador");
+        usuario = user;
     }
 
     /**
@@ -88,11 +97,14 @@ public class TelaCadDoador extends javax.swing.JFrame {
         jTextFieldCep = new javax.swing.JFormattedTextField();
         jTextFieldNascimento = new javax.swing.JFormattedTextField();
         jLabel38 = new javax.swing.JLabel();
-        jTextFieldRg = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jComboBoxTipoSanguineo = new javax.swing.JComboBox<>();
         jLabel10 = new javax.swing.JLabel();
         jTextFieldHoraObito = new javax.swing.JFormattedTextField();
+        jTextFieldRg = new javax.swing.JFormattedTextField();
+        jPanel1 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTableResponsavel = new javax.swing.JTable();
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Dados Pessoais"));
 
@@ -339,6 +351,12 @@ public class TelaCadDoador extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
+        try {
+            jTextFieldRg.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#.###.###")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -372,10 +390,10 @@ public class TelaCadDoador extends javax.swing.JFrame {
                                         .addComponent(jTextFieldCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGap(64, 64, 64)
                                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jTextFieldRg, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel38)))
+                                        .addComponent(jLabel38)
+                                        .addComponent(jTextFieldRg, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addComponent(jTextFieldEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(21, 21, 21)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jTextFieldCep, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel9)
@@ -443,6 +461,35 @@ public class TelaCadDoador extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Responsável"));
+
+        jTableResponsavel.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane1.setViewportView(jTableResponsavel);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(195, 195, 195))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -450,21 +497,27 @@ public class TelaCadDoador extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(271, 271, 271)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButtonCadMoto)
                         .addGap(10, 10, 10)
-                        .addComponent(jButtonVoltarMoto, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jButtonVoltarMoto, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButtonCadMoto)
                     .addComponent(jButtonVoltarMoto))
@@ -476,7 +529,7 @@ public class TelaCadDoador extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonVoltarMotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarMotoActionPerformed
-        TelaPrincipal tela = new TelaPrincipal();
+        TelaPrincipal tela = new TelaPrincipal(usuario);
         tela.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButtonVoltarMotoActionPerformed
@@ -489,7 +542,7 @@ public class TelaCadDoador extends javax.swing.JFrame {
         if (verificaCampos()){
             controle.inserir(criaDoador());
             JOptionPane.showMessageDialog(null, "Doador cadastrado!!!");
-            TelaDoador telaDoador = new TelaDoador();
+            TelaDoador telaDoador = new TelaDoador(usuario); 
             telaDoador.setVisible(true);
             dispose();
         }else{
@@ -528,7 +581,7 @@ public class TelaCadDoador extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaCadDoador().setVisible(true);
+                new TelaCadDoador(null).setVisible(true);
             }
         });
     }
@@ -562,8 +615,11 @@ public class TelaCadDoador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTableResponsavel;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
@@ -583,7 +639,7 @@ public class TelaCadDoador extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField jTextFieldHoraObito;
     private javax.swing.JFormattedTextField jTextFieldNascimento;
     private javax.swing.JTextField jTextFieldNome;
-    private javax.swing.JTextField jTextFieldRg;
+    private javax.swing.JFormattedTextField jTextFieldRg;
     // End of variables declaration//GEN-END:variables
 
     private boolean verificaCampos() {
@@ -595,31 +651,12 @@ public class TelaCadDoador extends javax.swing.JFrame {
             !"".equals(jTextFieldCidade.getText()) &&
             !"".equals(jTextFieldBairro.getText()) &&
             !"".equals(jTextFieldRg.getText()) &&
-            !"".equals(jTextFieldNascimento.getText())){
+            !"".equals(jTextFieldNascimento.getText()) &&
+            jTableResponsavel.getSelectedRow() != -1){
             return true;
         }else{
             return false;
         }        
-    }
-    private Time time(String time) throws Exception{
-        try {
-            DateFormat formatter = new SimpleDateFormat("HH:mm");
-            java.sql.Time timeValue = new java.sql.Time(formatter.parse(time).getTime());
-            return timeValue;
-        } catch (ParseException e) {
-            throw e;
-        }
-    }
-    
-    public static java.sql.Date formataData(String data) throws Exception {
-        java.sql.Date date = null;
-     try {
-         DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-         date = new java.sql.Date( ((java.util.Date)formatter.parse(data)).getTime() );
-     } catch (ParseException e) {            
-         throw e;
-     }
-     return date;
     }
     
     private Doador criaDoador(){
@@ -632,12 +669,34 @@ public class TelaCadDoador extends javax.swing.JFrame {
         doador.setTipoSanguineo(String.valueOf(jComboBoxTipoSanguineo.getSelectedItem()));
         doador.setBairro(jTextFieldBairro.getText());
         doador.setRg(jTextFieldRg.getText());
+        doador.setUsuario(usuario);
+        String id = String.valueOf(jTableResponsavel.getModel().getValueAt(jTableResponsavel.getSelectedRow(), 0));
+        List result = controleResponsavel.getDados(id);
+        Responsavel responsavel = (Responsavel) result.get(0);
+        System.out.print(responsavel.getNome());
+        doador.setResponsavel(responsavel);
         try {
-            doador.setHoraObito(time(jTextFieldHoraObito.getText()));
-            doador.setNascimento(formataData(jTextFieldNascimento.getText()));
+            doador.setHoraObito(MetodosUteis.time(jTextFieldHoraObito.getText()));
+            doador.setNascimento(MetodosUteis.formataData(jTextFieldNascimento.getText()));
         } catch (Exception ex) {
             Logger.getLogger(TelaCadDoador.class.getName()).log(Level.SEVERE, null, ex);
         }
         return doador;
+    }
+    
+    private void atualiza() {
+        ArrayList dados = new ArrayList();
+        String [] colunas = new String[]{"ID", "Nome", "Endereço", "RG"};
+        List result = controleResponsavel.listaResponsavel();
+        for (Iterator iterator = result.iterator(); iterator.hasNext();) {
+            Responsavel responsavel = (Responsavel) iterator.next();
+            dados.add(new Object[]{responsavel.getIdresponsavel(),
+                responsavel.getNome(), responsavel.getCpf(),
+                responsavel.getRg()});
+        }
+        TabelaDados tabela = new TabelaDados(dados, colunas);
+        jTableResponsavel.setModel(tabela);
+        jTableResponsavel.getTableHeader().setReorderingAllowed(false);
+        jTableResponsavel.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
     }
 }

@@ -13,7 +13,6 @@ import Util.TabelaMotorista;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import javax.swing.ListSelectionModel;
 import visao.TelasUpdate.TelaUpdateMotorista;
@@ -192,7 +191,7 @@ public class TelaMotorista extends javax.swing.JFrame {
     private void jButtonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditarActionPerformed
         String id = String.valueOf(jTableMotoristas.getModel().getValueAt(jTableMotoristas.getSelectedRow(), 0));
         List result = controle.getDados(id);
-        TelaUpdateMotorista telaUpdateMotorista = new TelaUpdateMotorista(result);
+        TelaUpdateMotorista telaUpdateMotorista = new TelaUpdateMotorista(usuario, result);
         telaUpdateMotorista.setVisible(true);
         dispose(); 
     }//GEN-LAST:event_jButtonEditarActionPerformed
@@ -226,7 +225,7 @@ public class TelaMotorista extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonPesquisarActionPerformed
 
     private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarActionPerformed
-        TelaCadMotorista cadMotorista = new TelaCadMotorista();
+        TelaCadMotorista cadMotorista = new TelaCadMotorista(usuario);
         cadMotorista.setVisible(true);
         dispose();        
     }//GEN-LAST:event_jButtonCadastrarActionPerformed

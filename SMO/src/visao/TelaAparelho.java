@@ -150,16 +150,16 @@ public class TelaAparelho extends javax.swing.JFrame {
 
     private void jButtonVoltarMotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarMotoActionPerformed
         // TODO add your handling code here:
-        TelaPrincipal tela = new TelaPrincipal();
-        tela.setVisible(true);
-        dispose();
+        //TelaPrincipal tela = new TelaPrincipal();
+        //tela.setVisible(true);
+        //dispose();
     }//GEN-LAST:event_jButtonVoltarMotoActionPerformed
 
     private void jButtonVoltarMoto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarMoto1ActionPerformed
         // TODO add your handling code here:
-        TelaPrincipal tela = new TelaPrincipal();
-        tela.setVisible(true);
-        dispose();
+        //TelaPrincipal tela = new TelaPrincipal();
+        //tela.setVisible(true);
+        //dispose();
     }//GEN-LAST:event_jButtonVoltarMoto1ActionPerformed
 
     /**

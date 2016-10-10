@@ -27,9 +27,10 @@ public class TelaCadUsuario extends javax.swing.JFrame {
     
     Usuario usuario = new Usuario();
     ControleUsuario controle = new ControleUsuario();
-    
-    public TelaCadUsuario() {
+    Usuario usuario2;
+    public TelaCadUsuario(Usuario user) {
         initComponents();
+        usuario2 = user;
     }
 
     /**
@@ -352,7 +353,7 @@ public class TelaCadUsuario extends javax.swing.JFrame {
         if (verificaCampos()){
             controle.inserir(criaUsuario());
             JOptionPane.showMessageDialog(null, "Usuario cadastrado!!!");
-            TelaUsuario telaUsuario = new TelaUsuario();
+            TelaUsuario telaUsuario = new TelaUsuario(usuario2);
             telaUsuario.setVisible(true);
             dispose();
         }else{
@@ -390,7 +391,7 @@ public class TelaCadUsuario extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaCadUsuario().setVisible(true);
+                new TelaCadUsuario(null).setVisible(true);
             }
         });
     }

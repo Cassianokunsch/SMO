@@ -7,6 +7,7 @@ package visao.TelasCadastro;
 
 import Controle.ControleMotorista;
 import Model.Motorista;
+import Model.Usuario;
 import Util.MetodosUteis;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -24,12 +25,14 @@ public class TelaCadMotorista extends javax.swing.JFrame {
     
     Motorista motorista = new Motorista();
     ControleMotorista controle = new ControleMotorista();
+    Usuario usuario;
     /**
      * Creates new form TelaMotorista
      */
-    public TelaCadMotorista() {
+    public TelaCadMotorista(Usuario user) {
         initComponents();
         this.setTitle("Cadastro Motorista");
+        usuario = user;
     } 
 
     /**
@@ -343,7 +346,7 @@ public class TelaCadMotorista extends javax.swing.JFrame {
 
     private void jButtonVoltarMotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarMotoActionPerformed
         // TODO add your handling code here:
-        TelaMotorista telaMotorista = new TelaMotorista();
+        TelaMotorista telaMotorista = new TelaMotorista(usuario);
         telaMotorista.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButtonVoltarMotoActionPerformed
@@ -357,7 +360,7 @@ public class TelaCadMotorista extends javax.swing.JFrame {
         if (verificaCampos()){
             controle.inserir(criaMotorista());
             JOptionPane.showMessageDialog(null, "Motorista cadastrado!!!");
-            TelaMotorista telaMotorista = new TelaMotorista();
+            TelaMotorista telaMotorista = new TelaMotorista(usuario);
             telaMotorista.setVisible(true);
             dispose();
         }else{
@@ -396,7 +399,7 @@ public class TelaCadMotorista extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaCadMotorista().setVisible(true);
+                new TelaCadMotorista(null).setVisible(true);
             }
         });
     }

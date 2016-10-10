@@ -28,22 +28,22 @@ public class ControleDoador {
         session.save(doador);
         session.getTransaction().commit();
     }
-    public void delete(String idmotorista){
+    public void delete(String iddoador){
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-        String sql = "DELETE FROM DOADOR WHERE IDDOADOR = '" + idmotorista + "'";
+        String sql = "DELETE FROM DOADOR WHERE IDDOADOR = '" + iddoador + "'";
         SQLQuery query = session.createSQLQuery(sql);
         query.addEntity(Doador.class);
         int result = query.executeUpdate();
         System.out.println("Rows affected: " + result);
         session.getTransaction().commit();
     }
-    public List getDados(String idmotorista){
+    public List getDados(String iddoador){
            Session session = sessionFactory.openSession();
           Transaction tx = null;
           try{
              tx = session.beginTransaction();
-             String sql = "SELECT * FROM DOADOR WHERE IDDOADOR = '" + idmotorista +"'";
+             String sql = "SELECT * FROM DOADOR WHERE IDDOADOR = '" + iddoador +"'";
              SQLQuery query = session.createSQLQuery(sql);
              query.addEntity(Doador.class);
              //query.addEntity(Transporte.class);
@@ -63,11 +63,11 @@ public class ControleDoador {
           return null;
     }
     
-    public void update(String stringUpdate, int idmotorista){
+    public void update(String stringUpdate, int iddoador){
         Session session = sessionFactory.openSession();
         session.beginTransaction();
         String sql = "UPDATE DOADOR set " + stringUpdate +
-             " WHERE IDDOADOR = '" + idmotorista + "'";
+             " WHERE IDDOADOR = '" + iddoador + "'";
         SQLQuery query = session.createSQLQuery(sql);
         query.addEntity(Doador.class);
         int result = query.executeUpdate();
@@ -76,7 +76,7 @@ public class ControleDoador {
     }
     
     /* Method to  READ all the employees using Entity Query */
-   public List listaMotorista( ){
+   public List listaDoador( ){
       Session session = sessionFactory.openSession();
       Transaction tx = null;
       try{

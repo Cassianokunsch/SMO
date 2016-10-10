@@ -213,15 +213,19 @@ public class TelaResponsavel extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonCadastrarActionPerformed
 
     private void jButtonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditarActionPerformed
-        String id = String.valueOf(jTableResponsavel.getModel().getValueAt(jTableResponsavel.getSelectedRow(), 0));
-        List result = controle.getDados(id);
-        TelaUpdateResponsavel telaUpdateResponsavel = new TelaUpdateResponsavel(usuario, result);
-        telaUpdateResponsavel.setVisible(true);
-        dispose();
+        if (jTableResponsavel.getSelectedRow() != -1){
+            String id = String.valueOf(jTableResponsavel.getModel().getValueAt(jTableResponsavel.getSelectedRow(), 0));
+            List result = controle.getDados(id);
+            TelaUpdateResponsavel telaUpdateResponsavel = new TelaUpdateResponsavel(usuario, result);
+            telaUpdateResponsavel.setVisible(true);
+            dispose();
+        }else{
+            JOptionPane.showMessageDialog(null, "Selecione para depois editar");            
+        }
     }//GEN-LAST:event_jButtonEditarActionPerformed
 
     private void jButtonExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExcluirActionPerformed
-        if (jTableResponsavel.getSelectedRow() >= 0) {
+        if (jTableResponsavel.getSelectedRow() != 1) {
             int dialogButton = JOptionPane.YES_NO_OPTION;
             int dialogResult = JOptionPane.showConfirmDialog(null, "Tem certeza que quer excluir esse responsavel?", "Warning", dialogButton);
             if (dialogResult == JOptionPane.YES_OPTION) {

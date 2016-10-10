@@ -300,9 +300,9 @@ public class TelaReceptor extends javax.swing.JFrame {
 
     private void jButtonVoltarMotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarMotoActionPerformed
         // TODO add your handling code here:
-        TelaPrincipal tela = new TelaPrincipal();
-        tela.setVisible(true);
-        dispose();
+       // TelaPrincipal tela = new TelaPrincipal();
+        ///tela.setVisible(true);
+        //dispose();
     }//GEN-LAST:event_jButtonVoltarMotoActionPerformed
 
     private void jComboBoxUFSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxUFSActionPerformed

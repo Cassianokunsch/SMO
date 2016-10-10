@@ -26,7 +26,8 @@ public class TelaUsuario extends javax.swing.JFrame {
      * Creates new form TelaUsuario
      */
     ControleUsuario controle = new ControleUsuario();
-    public TelaUsuario() {
+    Usuario usuario2;
+    public TelaUsuario(Usuario user) {
         initComponents();
         atualiza();
     }
@@ -204,7 +205,7 @@ public class TelaUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonAtualizaActionPerformed
 
     private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarActionPerformed
-        TelaCadUsuario cadUsuario = new TelaCadUsuario();
+        TelaCadUsuario cadUsuario = new TelaCadUsuario(usuario2);
         cadUsuario.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButtonCadastrarActionPerformed
@@ -212,7 +213,7 @@ public class TelaUsuario extends javax.swing.JFrame {
     private void jButtonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditarActionPerformed
         String id = String.valueOf(jTableUsuario.getModel().getValueAt(jTableUsuario.getSelectedRow(), 0));
         List result = controle.getDados(id);
-        TelaUpdateUsuario telaUpdateUsuario = new TelaUpdateUsuario(result);
+        TelaUpdateUsuario telaUpdateUsuario = new TelaUpdateUsuario(usuario2, result);
         telaUpdateUsuario.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButtonEditarActionPerformed
@@ -232,7 +233,7 @@ public class TelaUsuario extends javax.swing.JFrame {
 
     private void jButtonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarActionPerformed
         // TODO add your handling code here:
-        TelaPrincipal telaPrincipal = new TelaPrincipal();
+        TelaPrincipal telaPrincipal = new TelaPrincipal(usuario2);
         telaPrincipal.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButtonVoltarActionPerformed
@@ -267,7 +268,7 @@ public class TelaUsuario extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaUsuario().setVisible(true);
+                new TelaUsuario(null).setVisible(true);
             }
         });
     }
