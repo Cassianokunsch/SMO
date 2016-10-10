@@ -7,10 +7,10 @@ Trabalho desenvolvido durante a disciplina de BD e POO2
 Cassiano Künsch das Neves<br>
 
 ###2	INTRODUÇÃO E MOTIVAÇAO<br>
-Este documento contém a especificação do projeto do banco de dados <nome do projeto> e motivação da escolha realizada. <br>
+Este documento contém a especificação de uma aplicação que será usada para a diciplina de banco de dados SMO e POO2.<br>
 
 ###3	MINI-MUNDO<br>
-Hoje no estado do Espirito Santo<br>
+Criar uma aplicação com integração com banco de dados e orientada a objetos com aplicação de padrões de projeto. Essa aplicação será resposável basicamente gerar relatórios, cadastrar usuários do sistema e do negócio, e monitorar em tempo real caixas que transportam Órgãos.
 
 ###4    REQUISITOS DE USUÁRIO<br>
 
@@ -47,6 +47,12 @@ Hoje no estado do Espirito Santo<br>
 | RN06 | Um transporte só poderá ser criado se tiver uma caixa e um motorista relacionados a ele        |     Alta    |
 | RN07 | Toda ação que for realizada no sistema deve-se guardar o usuário                               |     Alta    |
 
+####4.4 TECNOLOGIA USADA
+Para a interface gráfica com o usuário será usada a Swing pertecente ao Java pois, ela prove um rapido desenvolvimento.
+
+A linguagem que será usada vai ser Java pois, é uma liguagem orientada a objetos e de pouco domínio dos integrantes do grupo, assim podendo melhorar as habilidades com a mesma.
+
+Para o banco de dados será usado o Postgress pois, foi esse o indicado pelo professor de BD1.
 ###5 DIAGRAMA DE CLASSE
 
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Class%20Diagram0.jpg "Title")
