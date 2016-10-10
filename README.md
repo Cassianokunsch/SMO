@@ -13,8 +13,14 @@ Este documento contém a especificação do projeto do banco de dados <nome do p
 Hoje no estado do Espirito Santo<br>
 
 ###4    REQUISITOS DE USUÁRIO<br>
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| ID   | Descrição                                                 | Prioridade  |
+| -----|:---------------------------------------------------------:| -----------:|
+| RF01 | O usuário deve conseguir realizar um CRUD de usuário      |     Alta    |
+| RF01 | O usuário deve consegui realizar um CRUD de motorista     |     Alta    |
+| RF01 | O usuário deve consegui realizar um CRUD de aparelho      |     Alta    |
+| RF01 | O usuário deve consegui realizar um CRUD de doador        |     Alta    |
+| RF01 | O usuário deve consegui realizar um CRUD de caixa         |     Alta    |
+| RF01 | O usuário deve consegui realizar um CRUD de responsavel   |     Alta    |
+| RF01 | O usuário deve consegui realizar um CRUD de receptor      |     Alta    |
+| RF01 | O usuário deve consegui realizar um CRUD de transporte    |     Alta    |
+| RF01 | O usuário deve consegui realizar um CRUD de transplante   |     Alta    |
