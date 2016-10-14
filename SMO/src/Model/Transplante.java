@@ -22,7 +22,7 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name = "transplante",
-         schema = "public"
+        schema = "public"
 )
 public class Transplante implements java.io.Serializable {
 

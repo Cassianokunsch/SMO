@@ -19,7 +19,7 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name = "localizacao",
-         schema = "public"
+        schema = "public"
 )
 public class Localizacao implements java.io.Serializable {
 
@@ -31,7 +31,6 @@ public class Localizacao implements java.io.Serializable {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
-
     @Column(name = "idlocalizacao", nullable = false, length = 10)
     public String getIdlocalizacao() {
         return this.idlocalizacao;

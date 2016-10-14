@@ -19,7 +19,7 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name = "temperatura",
-         schema = "public"
+        schema = "public"
 )
 public class Temperatura implements java.io.Serializable {
 

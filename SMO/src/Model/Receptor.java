@@ -22,7 +22,7 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name = "receptor",
-         schema = "public"
+        schema = "public"
 )
 public class Receptor implements java.io.Serializable {
 

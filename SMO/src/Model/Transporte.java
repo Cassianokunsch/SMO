@@ -19,7 +19,7 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name = "transporte",
-         schema = "public"
+        schema = "public"
 )
 public class Transporte implements java.io.Serializable {
 
