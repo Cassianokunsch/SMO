@@ -5,10 +5,7 @@
  */
 package Controle;
 
-import Model.Localizacao;
 import Model.Motorista;
-import Model.Temperatura;
-import Model.Transporte;
 import Util.NewHibernateUtil;
 import java.util.List;
 import org.hibernate.HibernateException;
@@ -50,10 +47,8 @@ public class ControleMotorista {
              String sql = "SELECT * FROM MOTORISTA WHERE IDMOTORISTA = '" + idmotorista +"'";
              SQLQuery query = session.createSQLQuery(sql);
              query.addEntity(Motorista.class);
-             
              List result = query.list();
              tx.commit();
-
              return result;
           }catch (HibernateException e) {
              if (tx!=null) tx.rollback();
@@ -76,7 +71,6 @@ public class ControleMotorista {
         session.getTransaction().commit();
     }
     
-    /* Method to  READ all the employees using Entity Query */
    public List listaMotorista( ){
       Session session = sessionFactory.openSession();
       Transaction tx = null;
@@ -87,7 +81,6 @@ public class ControleMotorista {
          query.addEntity(Motorista.class);
          List result = query.list();
          tx.commit();
-         
          return result;
       }catch (HibernateException e) {
          if (tx!=null) tx.rollback();

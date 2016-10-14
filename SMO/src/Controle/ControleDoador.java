@@ -19,7 +19,7 @@ import org.hibernate.Transaction;
  * @author Cassiano kunsch
  */
 public class ControleDoador {
-    
+
     SessionFactory sessionFactory = NewHibernateUtil.getSessionFactory();
 
     public void inserir(Doador doador) {
@@ -46,7 +46,6 @@ public class ControleDoador {
              String sql = "SELECT * FROM DOADOR WHERE IDDOADOR = '" + iddoador +"'";
              SQLQuery query = session.createSQLQuery(sql);
              query.addEntity(Doador.class);
-             
              List result = query.list();
              tx.commit();
 
@@ -72,7 +71,6 @@ public class ControleDoador {
         session.getTransaction().commit();
     }
     
-    /* Method to  READ all the employees using Entity Query */
    public List listaDoador( ){
       Session session = sessionFactory.openSession();
       Transaction tx = null;
