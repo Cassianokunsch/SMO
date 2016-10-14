@@ -47,17 +47,17 @@ Contributor(s):
     <property name="hibernate.connection.username">postgres</property>
     <property name="hibernate.connection.password">Cc98576036</property>
     <property name="hibernate.current_session_context_class">thread</property>
-    <mapping resource="Model/Orgao.hbm.xml"/>
-    <mapping resource="Model/Responsavel.hbm.xml"/>
-    <mapping resource="Model/Localizacao.hbm.xml"/>
-    <mapping resource="Model/Doador.hbm.xml"/>
-    <mapping resource="Model/Transplante.hbm.xml"/>
-    <mapping resource="Model/Usuario.hbm.xml"/>
-    <mapping resource="Model/Aparelho.hbm.xml"/>
-    <mapping resource="Model/Caixa.hbm.xml"/>
-    <mapping resource="Model/Temperatura.hbm.xml"/>
-    <mapping resource="Model/Transporte.hbm.xml"/>
-    <mapping resource="Model/Motorista.hbm.xml"/>
-    <mapping resource="Model/Receptor.hbm.xml"/>
+    <mapping class="Model.Doador"/>
+    <mapping class="Model.Temperatura"/>
+    <mapping class="Model.Transplante"/>
+    <mapping class="Model.Aparelho"/>
+    <mapping class="Model.Transporte"/>
+    <mapping class="Model.Caixa"/>
+    <mapping class="Model.Localizacao"/>
+    <mapping class="Model.Usuario"/>
+    <mapping class="Model.Receptor"/>
+    <mapping class="Model.Orgao"/>
+    <mapping class="Model.Responsavel"/>
+    <mapping class="Model.Motorista"/>
   </session-factory>
 </hibernate-configuration>

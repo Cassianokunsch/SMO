@@ -19,7 +19,7 @@ import org.hibernate.Transaction;
  * @author Cassiano kunsch
  */
 public class ControleDoador {
-    //Motorista motorista = new Motorista();
+    
     SessionFactory sessionFactory = NewHibernateUtil.getSessionFactory();
 
     public void inserir(Doador doador) {
@@ -46,9 +46,6 @@ public class ControleDoador {
              String sql = "SELECT * FROM DOADOR WHERE IDDOADOR = '" + iddoador +"'";
              SQLQuery query = session.createSQLQuery(sql);
              query.addEntity(Doador.class);
-             //query.addEntity(Transporte.class);
-             //query.addEntity(Temperatura.class);
-             //query.addEntity(Localizacao.class);
              
              List result = query.list();
              tx.commit();
