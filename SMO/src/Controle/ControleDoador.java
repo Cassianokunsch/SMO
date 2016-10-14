@@ -19,7 +19,6 @@ import org.hibernate.Transaction;
  * @author Cassiano kunsch
  */
 public class ControleDoador {
-
     SessionFactory sessionFactory = NewHibernateUtil.getSessionFactory();
 
     public void inserir(Doador doador) {
