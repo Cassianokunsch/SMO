@@ -58,6 +58,6 @@ Para o banco de dados será usado o Postgress pois, foi esse o indicado pelo pro
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Class%20Diagram0.jpg "Title")
 
 ###6 MODELO CONCEITUAL
-![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/BD2.jpg "Title")
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/BD.jpg "Title")
 
 

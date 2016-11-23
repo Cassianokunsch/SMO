@@ -6,30 +6,57 @@
 package Controle;
 
 import Model.Usuario;
-import Util.NewHibernateUtil;
-import java.util.List;
-import org.hibernate.SQLQuery;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import ModelDao.UsuarioDao;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
+import visao.TelaLogin;
 
 /**
  *
  * @author Cassiano kunsch
  */
 public class ControleLogin {
-    
-    SessionFactory sessionFactory = NewHibernateUtil.getSessionFactory();
-    
-    public List findUser(String login){
-        Session session = sessionFactory.openSession();
-        session.beginTransaction();
-        String sql = "SELECT * FROM USUARIO WHERE LOGIN = '" + login + "'";
-        SQLQuery query = session.createSQLQuery(sql);
-        query.addEntity(Usuario.class);
-        List result = query.list();
-        session.getTransaction().commit();
-        
-        return result;
+
+    private TelaLogin telaLogin;
+    UsuarioDao usuarioDao;
+
+    public ControleLogin() {
+        this.usuarioDao = new UsuarioDao();
+        this.telaLogin = new TelaLogin();
+        JButton login = this.telaLogin.getLoginButton();
+
+        login.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Usuario user = new Usuario();
+                user.setLogin(telaLogin.getUserName());
+                user.setSenha(telaLogin.getPassword());
+                if (login(user)) {
+                    ControlePrincipal controle = new ControlePrincipal();
+                    controle.showTelaPrincipal();
+                    telaLogin.setVisible(false);
+                } else {
+                    JOptionPane.showMessageDialog(null, "Usuário e senhas inválidos");
+                }
+            }
+        });
     }
-    
+
+    public boolean login(Usuario usuario) {
+        Usuario user = this.usuarioDao.findUser(
+                usuario.getLogin(),
+                usuario.getSenha());
+        return user != null;
+    }
+
+    public boolean logout(Usuario usuario) {
+        showLogin();
+        return false;
+    }
+
+    public void showLogin() {
+        this.telaLogin.setVisible(true);
+    }
 }
