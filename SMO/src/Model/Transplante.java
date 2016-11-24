@@ -39,7 +39,7 @@ public class Transplante implements java.io.Serializable {
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "idpessoa", nullable = false)
+    @JoinColumn(name = "idpessoa", nullable = false, insertable = false, updatable = false)
     public Receptor getReceptor() {
         return this.receptor;
     }
@@ -49,7 +49,7 @@ public class Transplante implements java.io.Serializable {
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "idpessoa", nullable = false)
+    @JoinColumn(name = "idpessoa", nullable = false, insertable = false, updatable = false)
     public Usuario getUsuario() {
         return this.usuario;
     }

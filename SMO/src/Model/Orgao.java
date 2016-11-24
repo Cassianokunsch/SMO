@@ -32,7 +32,7 @@ public class Orgao implements java.io.Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idorgao", unique = true, nullable = false)
+    @Column(name = "idorgao", unique = true, nullable = false, insertable = false, updatable = false)
     public int getIdorgao() {
         return this.idorgao;
     }
@@ -42,7 +42,7 @@ public class Orgao implements java.io.Serializable {
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "idpessoa", nullable = false)
+    @JoinColumn(name = "idpessoa", nullable = false, insertable = false, updatable = false)
     public Doador getDoador() {
         return this.doador;
     }
@@ -52,7 +52,7 @@ public class Orgao implements java.io.Serializable {
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "idpessoa", nullable = false)
+    @JoinColumn(name = "idpessoa", nullable = false, insertable = false, updatable = false)
     public Transplante getTransplante() {
         return this.transplante;
     }
@@ -62,7 +62,7 @@ public class Orgao implements java.io.Serializable {
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "idpessoa", nullable = false)
+    @JoinColumn(name = "idpessoa", nullable = false, insertable = false, updatable = false)
     public Usuario getUsuario() {
         return this.usuario;
     }
