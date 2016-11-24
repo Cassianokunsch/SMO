@@ -8,36 +8,36 @@ package Controle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
-import visao.TelasCadastro.TelaCadDoador;
-import visao.VisaoCrud;
-
+import visaoo.TelasCadastro.TelaCadDoador;
+//import visaoo.VisaoCrud;
+//
 /**
  *
  * @author Cassiano kunsch
  */
 public class ControleDoardorCrud {
     
-    private final VisaoCrud visaoCrud;
-    
-    public ControleDoardorCrud(){
-        visaoCrud = new VisaoCrud();
-        visaoCrud.setBoard("Doador");
-        setActions();
-    }
-
-    private void setActions() {
-        actionButtonCadastrar();        
-    }
-    
-    private void actionButtonCadastrar(){
-        JButton buttonCadastrar = visaoCrud.getButtonCadastrar();
-        buttonCadastrar.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                TelaCadDoador tela = new TelaCadDoador(null);
-                tela.setVisible(true);
-                visaoCrud.setVisible(false);
-            }
-        });
-    }
+//    private final VisaoCrud visaoCrud;
+//    
+//    public ControleDoardorCrud(){
+//        visaoCrud = new VisaoCrud();
+//        visaoCrud.setBoard("Doador");
+//        setActions();
+//    }
+//
+//    private void setActions() {
+//        actionButtonCadastrar();        
+//    }
+//    
+//    private void actionButtonCadastrar(){
+//        JButton buttonCadastrar = visaoCrud.getButtonCadastrar();
+//        buttonCadastrar.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                TelaCadDoador tela = new TelaCadDoador(null);
+//                tela.setVisible(true);
+//                visaoCrud.setVisible(false);
+//            }
+//        });
+//    }
 }

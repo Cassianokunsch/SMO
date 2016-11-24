@@ -10,7 +10,7 @@ import Controle.ControleResponsavel;
 import Model.Doador;
 import Model.Responsavel;
 import Model.Usuario;
-import ModelDao.ConexaoDao;
+//import ModelDao.ConexaoDao;
 import Util.MetodosUteis;
 import Util.TabelaDados;
 import java.util.ArrayList;
@@ -29,20 +29,20 @@ import visaoo.TelaPrincipal;
  */
 public class TelaCadDoador extends javax.swing.JFrame {
 
-    /**
-     * Creates new form TelaDoador
-     */
-    Doador doador = new Doador();
-    //ControleDoador controle = new ControleDoador();
-    ConexaoDao controle = new ConexaoDao();
-    ControleResponsavel controleResponsavel = new ControleResponsavel();
-    Usuario usuario;
+//    /**
+//     * Creates new form TelaDoador
+//     */
+//    Doador doador = new Doador();
+//    //ControleDoador controle = new ControleDoador();
+//    ConexaoDao controle = new ConexaoDao();
+//    ControleResponsavel controleResponsavel = new ControleResponsavel();
+//    Usuario usuario;
     
     public TelaCadDoador(Usuario user) {
         initComponents();
         atualiza();
         this.setTitle("Cadastro Doador");
-        usuario = user;
+        //usuario = user;
     }
 
     /**
@@ -531,9 +531,9 @@ public class TelaCadDoador extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonVoltarMotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarMotoActionPerformed
-        TelaPrincipal tela = new TelaPrincipal(usuario);
-        tela.setVisible(true);
-        dispose();
+//        TelaPrincipal tela = new TelaPrincipal(usuario);
+//        tela.setVisible(true);
+//        dispose();
     }//GEN-LAST:event_jButtonVoltarMotoActionPerformed
 
     private void jComboBoxTipoSanguineoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxTipoSanguineoActionPerformed
@@ -541,15 +541,15 @@ public class TelaCadDoador extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBoxTipoSanguineoActionPerformed
 
     private void jButtonCadMotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadMotoActionPerformed
-        if (verificaCampos()){
-            controle.inserir(criaDoador());
-            JOptionPane.showMessageDialog(null, "Doador cadastrado!!!");
-            TelaDoador telaDoador = new TelaDoador(usuario); 
-            telaDoador.setVisible(true);
-            dispose();
-        }else{
-            JOptionPane.showMessageDialog(null, "Todos os campos são obrigatorios!!!");
-        }
+//        if (verificaCampos()){
+//            controle.inserir(criaDoador());
+//            JOptionPane.showMessageDialog(null, "Doador cadastrado!!!");
+//            TelaDoador telaDoador = new TelaDoador(usuario); 
+//            telaDoador.setVisible(true);
+//            dispose();
+//        }else{
+//            JOptionPane.showMessageDialog(null, "Todos os campos são obrigatorios!!!");
+//        }
     }//GEN-LAST:event_jButtonCadMotoActionPerformed
 
     /**
@@ -661,45 +661,45 @@ public class TelaCadDoador extends javax.swing.JFrame {
         }        
     }
     
-    private Doador criaDoador(){
-        doador.setEndereco(jTextFieldEndereco.getText());
-        doador.setCep(jTextFieldCep.getText());
-        doador.setNome(jTextFieldNome.getText());
-        doador.setCpf(jTextFieldCpf.getText());
-        doador.setCidade(jTextFieldCidade.getText());
-        doador.setUf(String.valueOf(jComboBoxUf.getSelectedItem()));
-        doador.setTipoSanguineo(String.valueOf(jComboBoxTipoSanguineo.getSelectedItem()));
-        doador.setBairro(jTextFieldBairro.getText());
-        doador.setRg(jTextFieldRg.getText());
-        doador.setUsuario(usuario);
-        String id = String.valueOf(jTableResponsavel.getModel().getValueAt(jTableResponsavel.getSelectedRow(), 0));
-        List result = controleResponsavel.getDados(id);
-        Responsavel responsavel = (Responsavel) result.get(0);
-        System.out.print(responsavel.getNome());
-        doador.setResponsavel(responsavel);
-        doador.setD_e_l_e_t_e('0');
-        try {
-            doador.setHoraObito(MetodosUteis.time(jTextFieldHoraObito.getText()));
-            doador.setNascimento(MetodosUteis.formataData(jTextFieldNascimento.getText()));
-        } catch (Exception ex) {
-            Logger.getLogger(TelaCadDoador.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return doador;
-    }
+    //private Doador criaDoador(){
+//        doador.setEndereco(jTextFieldEndereco.getText());
+//        doador.setCep(jTextFieldCep.getText());
+//        doador.setNome(jTextFieldNome.getText());
+//        doador.setCpf(jTextFieldCpf.getText());
+//        doador.setCidade(jTextFieldCidade.getText());
+//        doador.setUf(String.valueOf(jComboBoxUf.getSelectedItem()));
+//        doador.setTipoSanguineo(String.valueOf(jComboBoxTipoSanguineo.getSelectedItem()));
+//        doador.setBairro(jTextFieldBairro.getText());
+//        doador.setRg(jTextFieldRg.getText());
+//        doador.setUsuario(usuario);
+//        String id = String.valueOf(jTableResponsavel.getModel().getValueAt(jTableResponsavel.getSelectedRow(), 0));
+//        List result = controleResponsavel.getDados(id);
+//        Responsavel responsavel = (Responsavel) result.get(0);
+//        System.out.print(responsavel.getNome());
+//        doador.setResponsavel(responsavel);
+//        doador.setD_e_l_e_t_e('0');
+//        try {
+//            doador.setHoraObito(MetodosUteis.time(jTextFieldHoraObito.getText()));
+//            doador.setNascimento(MetodosUteis.formataData(jTextFieldNascimento.getText()));
+//        } catch (Exception ex) {
+//            Logger.getLogger(TelaCadDoador.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        return doador;
+   // }
     
     private void atualiza() {
-        ArrayList dados = new ArrayList();
-        String [] colunas = new String[]{"ID", "Nome", "CPF", "RG"};
-        List result = controleResponsavel.listaResponsavel();
-        for (Iterator iterator = result.iterator(); iterator.hasNext();) {
-            Responsavel responsavel = (Responsavel) iterator.next();
-            dados.add(new Object[]{responsavel.getIdresponsavel(),
-                responsavel.getNome(), responsavel.getCpf(),
-                responsavel.getRg()});
-        }
-        TabelaDados tabela = new TabelaDados(dados, colunas);
-        jTableResponsavel.setModel(tabela);
-        jTableResponsavel.getTableHeader().setReorderingAllowed(false);
-        jTableResponsavel.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+//        ArrayList dados = new ArrayList();
+//        String [] colunas = new String[]{"ID", "Nome", "CPF", "RG"};
+//        List result = controleResponsavel.listaResponsavel();
+//        for (Iterator iterator = result.iterator(); iterator.hasNext();) {
+//            Responsavel responsavel = (Responsavel) iterator.next();
+//            dados.add(new Object[]{responsavel.getIdresponsavel(),
+//                responsavel.getNome(), responsavel.getCpf(),
+//                responsavel.getRg()});
+//        }
+//        TabelaDados tabela = new TabelaDados(dados, colunas);
+//        jTableResponsavel.setModel(tabela);
+//        jTableResponsavel.getTableHeader().setReorderingAllowed(false);
+//        jTableResponsavel.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
     }
 }

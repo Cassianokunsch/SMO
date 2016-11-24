@@ -24,7 +24,7 @@ public class Receptor extends Pessoa implements java.io.Serializable {
     private Set<Transplante> transplantes = new HashSet(0);
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "idusuario", nullable = false)
+    @JoinColumn(name = "idpessoa", nullable = false)
     public Usuario getUsuario() {
         return this.usuario;
     }

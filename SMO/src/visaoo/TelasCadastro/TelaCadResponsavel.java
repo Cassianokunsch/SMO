@@ -524,15 +524,15 @@ public class TelaCadResponsavel extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldTelefoneActionPerformed
 
     private void jButtonCadMotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadMotoActionPerformed
-        if (verificaCampos()){
-            controle.inserir(criaResponsavel());
-            JOptionPane.showMessageDialog(null, "Responsavel cadastrado!!!");
-            TelaResponsavel telaResponsavel = new TelaResponsavel(usuario);
-            telaResponsavel.setVisible(true);
-            dispose();
-        }else{
-            JOptionPane.showMessageDialog(null, "Todos os campos são obrigatorios!!!");
-        }
+//        if (verificaCampos()){
+//            controle.inserir(criaResponsavel());
+//            JOptionPane.showMessageDialog(null, "Responsavel cadastrado!!!");
+//            TelaResponsavel telaResponsavel = new TelaResponsavel(usuario);
+//            telaResponsavel.setVisible(true);
+//            dispose();
+//        }else{
+//            JOptionPane.showMessageDialog(null, "Todos os campos são obrigatorios!!!");
+//        }
     }//GEN-LAST:event_jButtonCadMotoActionPerformed
 
     /**

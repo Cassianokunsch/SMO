@@ -8,14 +8,14 @@ package Controle;
 import Model.Motorista;
 import ModelDao.GenericDAOImpl;
 import static Util.MetodosUteis.arrumaData;
-import Visao.TelaMotorista;
+import visaoo.TelaMotorista;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
-import visao.TelasUpdate.TelaUpdateMotorista;
+import visaoo.TelasUpdate.TelaUpdateMotorista;
 
 /**
  *
@@ -32,27 +32,31 @@ public class ControleUpdateMotorista {
         con = new GenericDAOImpl();
         setCampos();
     }
+    
+    public void showTelaUpdateMotorista(){
+        this.telaUpdateMotorista.setVisible(true);
+    }
 
     private void actionButtonAtualiza() {
-        JButton buttonAtualizar = telaUpdateMotorista.getjButtonAtualizaMoto();
-        buttonAtualizar.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (verificaCampos()) {
-                    if (comparaCampos() != null) {
-                        con.update(Motorista.class, "motorista", String.valueOf(motorista.getIdpessoa()), comparaCampos());
-                        JOptionPane.showMessageDialog(null, "Dados atualizados!");
-                    } else {
-                        JOptionPane.showMessageDialog(null, "Nenhum dado alterado!");
-                    }
-                    //TelaMotorista telaMotorista = new TelaMotorista(usuario);
-                    //telaMotorista.setVisible(true);
-                    //dispose();
-                } else {
-                    JOptionPane.showMessageDialog(null, "Todos os campos são obrigatorios!!!");
-                }
-            }
-        });
+//        JButton buttonAtualizar = telaUpdateMotorista.getjButtonAtualizaMoto();
+//        buttonAtualizar.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                if (verificaCampos()) {
+//                    if (comparaCampos() != null) {
+//                        con.update(Motorista.class, "motorista", String.valueOf(motorista.getIdpessoa()), comparaCampos());
+//                        JOptionPane.showMessageDialog(null, "Dados atualizados!");
+//                    } else {
+//                        JOptionPane.showMessageDialog(null, "Nenhum dado alterado!");
+//                    }
+//                    //TelaMotorista telaMotorista = new TelaMotorista(usuario);
+//                    //telaMotorista.setVisible(true);
+//                    //dispose();
+//                } else {
+//                    JOptionPane.showMessageDialog(null, "Todos os campos são obrigatorios!!!");
+//                }
+//            }
+//        });
     }
 
     private void setCampos() {

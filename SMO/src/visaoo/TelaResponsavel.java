@@ -213,35 +213,35 @@ public class TelaResponsavel extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonCadastrarActionPerformed
 
     private void jButtonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditarActionPerformed
-        if (jTableResponsavel.getSelectedRow() != -1){
-            String id = String.valueOf(jTableResponsavel.getModel().getValueAt(jTableResponsavel.getSelectedRow(), 0));
-            List result = controle.getDados(id);
-            TelaUpdateResponsavel telaUpdateResponsavel = new TelaUpdateResponsavel(usuario, result);
-            telaUpdateResponsavel.setVisible(true);
-            dispose();
-        }else{
-            JOptionPane.showMessageDialog(null, "Selecione para depois editar");            
-        }
+//        if (jTableResponsavel.getSelectedRow() != -1){
+//            String id = String.valueOf(jTableResponsavel.getModel().getValueAt(jTableResponsavel.getSelectedRow(), 0));
+//            List result = controle.getDados(id);
+//            TelaUpdateResponsavel telaUpdateResponsavel = new TelaUpdateResponsavel(usuario, result);
+//            telaUpdateResponsavel.setVisible(true);
+//            dispose();
+//        }else{
+//            JOptionPane.showMessageDialog(null, "Selecione para depois editar");            
+//        }
     }//GEN-LAST:event_jButtonEditarActionPerformed
 
     private void jButtonExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExcluirActionPerformed
-        if (jTableResponsavel.getSelectedRow() != 1) {
-            int dialogButton = JOptionPane.YES_NO_OPTION;
-            int dialogResult = JOptionPane.showConfirmDialog(null, "Tem certeza que quer excluir esse responsavel?", "Warning", dialogButton);
-            if (dialogResult == JOptionPane.YES_OPTION) {
-                String id = String.valueOf(jTableResponsavel.getModel().getValueAt(jTableResponsavel.getSelectedRow(), 0));
-                controle.delete(id);
-                JOptionPane.showMessageDialog(null, "Responsavel Excluido com sucesso!");
-                atualiza();
-            }
-        }
+//        if (jTableResponsavel.getSelectedRow() != 1) {
+//            int dialogButton = JOptionPane.YES_NO_OPTION;
+//            int dialogResult = JOptionPane.showConfirmDialog(null, "Tem certeza que quer excluir esse responsavel?", "Warning", dialogButton);
+//            if (dialogResult == JOptionPane.YES_OPTION) {
+//                String id = String.valueOf(jTableResponsavel.getModel().getValueAt(jTableResponsavel.getSelectedRow(), 0));
+//                controle.delete(id);
+//                JOptionPane.showMessageDialog(null, "Responsavel Excluido com sucesso!");
+//                atualiza();
+//            }
+//        }
     }//GEN-LAST:event_jButtonExcluirActionPerformed
 
     private void jButtonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarActionPerformed
-        // TODO add your handling code here:
-        TelaPrincipal telaPrincipal = new TelaPrincipal(usuario);
-        telaPrincipal.setVisible(true);
-        dispose();
+//        // TODO add your handling code here:
+//        TelaPrincipal telaPrincipal = new TelaPrincipal(usuario);
+//        telaPrincipal.setVisible(true);
+//        dispose();
     }//GEN-LAST:event_jButtonVoltarActionPerformed
 
     /**
@@ -294,22 +294,22 @@ public class TelaResponsavel extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void atualiza() {
-        ArrayList dados = new ArrayList();
-        String [] colunas = new String[]{"ID", "Nome", "Endereço", "CEP",
-            "Email", "CPF", "Cidade", "UF", "Telefone"
-            , "Bairro", "RG", "Nascimento"};
-        List result = controle.listaResponsavel();
-        for (Iterator iterator = result.iterator(); iterator.hasNext();) {
-            Responsavel responsavel = (Responsavel) iterator.next();
-            dados.add(new Object[]{responsavel.getIdresponsavel(), responsavel.getNome(),
-                responsavel.getEndereco(), responsavel.getCep(), responsavel.getEmail(),
-                responsavel.getCpf(), responsavel.getCidade(), responsavel.getUf()
-                ,responsavel.getTelefone(), responsavel.getBairro(),
-                responsavel.getRg(), responsavel.getNascimento()});
-        }
-        TabelaDados tabela = new TabelaDados(dados, colunas);
-        jTableResponsavel.setModel(tabela);
-        jTableResponsavel.getTableHeader().setReorderingAllowed(false);
-        jTableResponsavel.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+//        ArrayList dados = new ArrayList();
+//        String [] colunas = new String[]{"ID", "Nome", "Endereço", "CEP",
+//            "Email", "CPF", "Cidade", "UF", "Telefone"
+//            , "Bairro", "RG", "Nascimento"};
+//        List result = controle.listaResponsavel();
+//        for (Iterator iterator = result.iterator(); iterator.hasNext();) {
+//            Responsavel responsavel = (Responsavel) iterator.next();
+//            dados.add(new Object[]{responsavel.getIdresponsavel(), responsavel.getNome(),
+//                responsavel.getEndereco(), responsavel.getCep(), responsavel.getEmail(),
+//                responsavel.getCpf(), responsavel.getCidade(), responsavel.getUf()
+//                ,responsavel.getTelefone(), responsavel.getBairro(),
+//                responsavel.getRg(), responsavel.getNascimento()});
+//        }
+//        TabelaDados tabela = new TabelaDados(dados, colunas);
+//        jTableResponsavel.setModel(tabela);
+//        jTableResponsavel.getTableHeader().setReorderingAllowed(false);
+//        jTableResponsavel.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
     }
 }

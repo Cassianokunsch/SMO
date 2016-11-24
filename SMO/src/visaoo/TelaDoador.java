@@ -8,7 +8,7 @@ package visaoo;
 import Controle.ControleDoador;
 import Model.Doador;
 import Model.Usuario;
-import ModelDao.ConexaoDao;
+//import ModelDao.ConexaoDao;
 import ModelDao.DBConnection;
 import Util.TabelaDados;
 import java.util.ArrayList;
@@ -32,7 +32,7 @@ public class TelaDoador extends javax.swing.JFrame {
     
     Usuario usuario;
     //ControleDoador controle = new ControleDoador();
-    ConexaoDao controle = new ConexaoDao();
+    //ConexaoDao controle = new ConexaoDao();
     
     public TelaDoador(Usuario user) {
         initComponents();
@@ -222,31 +222,31 @@ public class TelaDoador extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonCadastrarActionPerformed
 
     private void jButtonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditarActionPerformed
-        String id = String.valueOf(jTableDoador.getModel().getValueAt(jTableDoador.getSelectedRow(), 0));
-        List result = controle.getDados(id);
-        TelaUpdateDoador telaUpdateDoador = new TelaUpdateDoador(usuario, result);
-        telaUpdateDoador.setVisible(true);
-        dispose();
+//        String id = String.valueOf(jTableDoador.getModel().getValueAt(jTableDoador.getSelectedRow(), 0));
+//        List result = controle.getDados(id);
+//        TelaUpdateDoador telaUpdateDoador = new TelaUpdateDoador(usuario, result);
+//        telaUpdateDoador.setVisible(true);
+//        dispose();
     }//GEN-LAST:event_jButtonEditarActionPerformed
 
     private void jButtonExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExcluirActionPerformed
-        if (jTableDoador.getSelectedRow() >= 0) {
-            int dialogButton = JOptionPane.YES_NO_OPTION;
-            int dialogResult = JOptionPane.showConfirmDialog (null, "Tem certeza que quer excluir esse motorista?","Warning",dialogButton);
-            if(dialogResult == JOptionPane.YES_OPTION){
-                String id = String.valueOf(jTableDoador.getModel().getValueAt(jTableDoador.getSelectedRow(), 0));
-                controle.delete(new Doador(), "DOADOR", id);
-                JOptionPane.showMessageDialog(null, "Motorista Excluido com sucesso!");
-                atualiza();
-            }
-        }
+//        if (jTableDoador.getSelectedRow() >= 0) {
+//            int dialogButton = JOptionPane.YES_NO_OPTION;
+//            int dialogResult = JOptionPane.showConfirmDialog (null, "Tem certeza que quer excluir esse motorista?","Warning",dialogButton);
+//            if(dialogResult == JOptionPane.YES_OPTION){
+//                String id = String.valueOf(jTableDoador.getModel().getValueAt(jTableDoador.getSelectedRow(), 0));
+//                controle.delete(new Doador(), "DOADOR", id);
+//                JOptionPane.showMessageDialog(null, "Motorista Excluido com sucesso!");
+//                atualiza();
+//            }
+//        }
     }//GEN-LAST:event_jButtonExcluirActionPerformed
 
     private void jButtonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarActionPerformed
-        // TODO add your handling code here:
-        TelaPrincipal telaPrincipal = new TelaPrincipal(usuario);
-        telaPrincipal.setVisible(true);
-        dispose();
+//        // TODO add your handling code here:
+//        TelaPrincipal telaPrincipal = new TelaPrincipal(usuario);
+//        telaPrincipal.setVisible(true);
+//        dispose();
     }//GEN-LAST:event_jButtonVoltarActionPerformed
 
     /**
@@ -299,23 +299,23 @@ public class TelaDoador extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void atualiza() {
-        ArrayList dados = new ArrayList();
-        String [] colunas = new String[]{"ID", "Nome", "Hora Obito", "Tipo Sanguineo", "Endereço", "CEP",
-            "CPF", "Cidade", "UF" , "Bairro", "RG", "Nascimento"};
-        List result = controle.listaDoador(new Doador());
-
-        for (Iterator iterator = result.iterator(); iterator.hasNext();) {
-            Doador doador = (Doador) iterator.next();
-            dados.add(new Object[]{doador.getIddoador(),
-                doador.getNome(), doador.getHoraObito(), doador.getTipoSanguineo(),
-                doador.getEndereco(), doador.getCep(), doador.getCpf(),
-                doador.getCidade(), doador.getUf(), doador.getBairro(),
-                doador.getRg(), doador.getNascimento()
-            });
-        }
-        TabelaDados tabela = new TabelaDados(dados, colunas);
-        jTableDoador.setModel(tabela);
-        jTableDoador.getTableHeader().setReorderingAllowed(false);
-        jTableDoador.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+//        ArrayList dados = new ArrayList();
+//        String [] colunas = new String[]{"ID", "Nome", "Hora Obito", "Tipo Sanguineo", "Endereço", "CEP",
+//            "CPF", "Cidade", "UF" , "Bairro", "RG", "Nascimento"};
+//        List result = controle.listaDoador(new Doador());
+//
+//        for (Iterator iterator = result.iterator(); iterator.hasNext();) {
+//            Doador doador = (Doador) iterator.next();
+//            dados.add(new Object[]{doador.getIddoador(),
+//                doador.getNome(), doador.getHoraObito(), doador.getTipoSanguineo(),
+//                doador.getEndereco(), doador.getCep(), doador.getCpf(),
+//                doador.getCidade(), doador.getUf(), doador.getBairro(),
+//                doador.getRg(), doador.getNascimento()
+//            });
+//        }
+//        TabelaDados tabela = new TabelaDados(dados, colunas);
+//        jTableDoador.setModel(tabela);
+//        jTableDoador.getTableHeader().setReorderingAllowed(false);
+//        jTableDoador.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
     }
 }

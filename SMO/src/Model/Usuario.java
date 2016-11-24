@@ -13,7 +13,7 @@ import javax.persistence.Table;
 @PrimaryKeyJoinColumn(name = "idPessoa")
 @Table(name = "usuario", schema = "public")
 
-public class Usuario extends Pessoa implements java.io.Serializable {
+public class Usuario extends Pessoa {
 
     private String telefone;
     private String email;

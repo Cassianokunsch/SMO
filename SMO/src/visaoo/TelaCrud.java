@@ -42,12 +42,12 @@ public class TelaCrud extends javax.swing.JFrame {
         jPanel1.setBorder(BorderFactory.createTitledBorder(nomeBorda));
     }
 
-    public JTable getjTableUsuario() {
-        return jTableUsuario;
+    public JTable getjTable() {
+        return jTable;
     }
 
-    public void setjTableUsuario(JTable jTableUsuario) {
-        this.jTableUsuario = jTableUsuario;
+    public void setjTable(JTable jTable) {
+        this.jTable = jTable;
     }
 
     @SuppressWarnings("unchecked")
@@ -60,7 +60,7 @@ public class TelaCrud extends javax.swing.JFrame {
         jButtonPesquisar = new javax.swing.JButton();
         jButtonAtualiza = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTableUsuario = new javax.swing.JTable();
+        jTable = new javax.swing.JTable();
         jButtonCadastrar = new javax.swing.JButton();
         jButtonEditar = new javax.swing.JButton();
         jButtonExcluir = new javax.swing.JButton();
@@ -76,7 +76,7 @@ public class TelaCrud extends javax.swing.JFrame {
 
         jButtonAtualiza.setText("Atualiza");
 
-        jTableUsuario.setModel(new javax.swing.table.DefaultTableModel(
+        jTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
                 {},
@@ -88,7 +88,7 @@ public class TelaCrud extends javax.swing.JFrame {
 
             }
         ));
-        jScrollPane2.setViewportView(jTableUsuario);
+        jScrollPane2.setViewportView(jTable);
 
         jButtonCadastrar.setText("Cadastrar");
 
@@ -177,7 +177,7 @@ public class TelaCrud extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTableUsuario;
+    private javax.swing.JTable jTable;
     private javax.swing.JTextField jTextFieldNomePesquisa;
     // End of variables declaration//GEN-END:variables
 }

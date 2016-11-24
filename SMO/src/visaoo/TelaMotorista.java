@@ -32,7 +32,7 @@ public class TelaMotorista extends javax.swing.JFrame {
         initComponents();
         //jListMotoristas.setModel(model);
         usuario = user;
-        atualiza();
+//        atualiza();
     }
 
     /**
@@ -189,24 +189,24 @@ public class TelaMotorista extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditarActionPerformed
-        String id = String.valueOf(jTableMotoristas.getModel().getValueAt(jTableMotoristas.getSelectedRow(), 0));
-        List result = controle.getDados(id);
-        TelaUpdateMotorista telaUpdateMotorista = new TelaUpdateMotorista(usuario, result);
-        telaUpdateMotorista.setVisible(true);
-        dispose(); 
+//        String id = String.valueOf(jTableMotoristas.getModel().getValueAt(jTableMotoristas.getSelectedRow(), 0));
+//        List result = controle.getDados(id);
+//        TelaUpdateMotorista telaUpdateMotorista = new TelaUpdateMotorista(usuario, result);
+//        telaUpdateMotorista.setVisible(true);
+//        dispose(); 
     }//GEN-LAST:event_jButtonEditarActionPerformed
 
     private void jButtonExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExcluirActionPerformed
-        if (jTableMotoristas.getSelectedRow() >= 0) {
-            int dialogButton = JOptionPane.YES_NO_OPTION;
-            int dialogResult = JOptionPane.showConfirmDialog (null, "Tem certeza que quer excluir esse motorista?","Warning",dialogButton);
-            if(dialogResult == JOptionPane.YES_OPTION){
-                String id = String.valueOf(jTableMotoristas.getModel().getValueAt(jTableMotoristas.getSelectedRow(), 0));
-                controle.delete(id);
-                JOptionPane.showMessageDialog(null, "Motorista Excluido com sucesso!");
-                 atualiza();
-            }            
-        }
+//        if (jTableMotoristas.getSelectedRow() >= 0) {
+//            int dialogButton = JOptionPane.YES_NO_OPTION;
+//            int dialogResult = JOptionPane.showConfirmDialog (null, "Tem certeza que quer excluir esse motorista?","Warning",dialogButton);
+//            if(dialogResult == JOptionPane.YES_OPTION){
+//                String id = String.valueOf(jTableMotoristas.getModel().getValueAt(jTableMotoristas.getSelectedRow(), 0));
+//                controle.delete(id);
+//                JOptionPane.showMessageDialog(null, "Motorista Excluido com sucesso!");
+//                 atualiza();
+//            }            
+//        }
     }//GEN-LAST:event_jButtonExcluirActionPerformed
 
     private void jButtonPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPesquisarActionPerformed
@@ -225,42 +225,42 @@ public class TelaMotorista extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonPesquisarActionPerformed
 
     private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarActionPerformed
-        TelaCadMotorista cadMotorista = new TelaCadMotorista(usuario);
-        cadMotorista.setVisible(true);
-        dispose();        
+//        TelaCadMotorista cadMotorista = new TelaCadMotorista(usuario);
+//        cadMotorista.setVisible(true);
+//        dispose();        
     }//GEN-LAST:event_jButtonCadastrarActionPerformed
 
     private void jButtonAtualizaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtualizaActionPerformed
         // TODO add your handling code here:
-        atualiza();
+//        atualiza();
     }//GEN-LAST:event_jButtonAtualizaActionPerformed
 
     private void jButtonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarActionPerformed
-        // TODO add your handling code here:
-        TelaPrincipal telaPrincipal = new TelaPrincipal(usuario);
-        telaPrincipal.setVisible(true);
-        dispose();
+//        // TODO add your handling code here:
+//        TelaPrincipal telaPrincipal = new TelaPrincipal(usuario);
+//        telaPrincipal.setVisible(true);
+//        dispose();
     }//GEN-LAST:event_jButtonVoltarActionPerformed
     
-    private void atualiza() {
-        ArrayList dados = new ArrayList();
-        String [] colunas = new String[]{"ID", "Nome", "Endereço", "CEP",
-            "Email", "CPF", "Cidade", "UF", "Validade CNH", "Telefone",
-            "CNH", "Bairro", "RG", "Nascimento"};
-        List result = controle.listaMotorista();
-        for (Iterator iterator = result.iterator(); iterator.hasNext();) {
-            Motorista motorista = (Motorista) iterator.next();
-            dados.add(new Object[]{motorista.getIdmotorista(), motorista.getNome(),
-                motorista.getEndereco(), motorista.getCep(), motorista.getEmail(),
-                motorista.getCpf(), motorista.getCidade(), motorista.getUf(),
-                motorista.getValidadeCnh(),motorista.getTelefone(), motorista.getCnh(), motorista.getBairro(),
-                motorista.getRg(), motorista.getNascimento()});
-        }
-        TabelaDados tabela = new TabelaDados(dados, colunas);
-        jTableMotoristas.setModel(tabela);
-        jTableMotoristas.getTableHeader().setReorderingAllowed(false);
-        jTableMotoristas.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-    }
+//    private void atualiza() {
+//        ArrayList dados = new ArrayList();
+//        String [] colunas = new String[]{"ID", "Nome", "Endereço", "CEP",
+//            "Email", "CPF", "Cidade", "UF", "Validade CNH", "Telefone",
+//            "CNH", "Bairro", "RG", "Nascimento"};
+//        List result = controle.listaMotorista();
+//        for (Iterator iterator = result.iterator(); iterator.hasNext();) {
+//            Motorista motorista = (Motorista) iterator.next();
+//            dados.add(new Object[]{motorista.getIdmotorista(), motorista.getNome(),
+//                motorista.getEndereco(), motorista.getCep(), motorista.getEmail(),
+//                motorista.getCpf(), motorista.getCidade(), motorista.getUf(),
+//                motorista.getValidadeCnh(),motorista.getTelefone(), motorista.getCnh(), motorista.getBairro(),
+//                motorista.getRg(), motorista.getNascimento()});
+//        }
+//        TabelaDados tabela = new TabelaDados(dados, colunas);
+//        jTableMotoristas.setModel(tabela);
+//        jTableMotoristas.getTableHeader().setReorderingAllowed(false);
+//        jTableMotoristas.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+//    }
     /**
      * @param args the command line arguments
      */

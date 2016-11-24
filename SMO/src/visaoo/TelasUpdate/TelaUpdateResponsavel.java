@@ -298,19 +298,19 @@ public class TelaUpdateResponsavel extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldTelefoneActionPerformed
 
     private void jButtonCadMotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadMotoActionPerformed
-        if (verificaCampos()){
-            if (comparaCampos() != null){
-                controle.update(comparaCampos(), responsavel.getIdresponsavel());
-                JOptionPane.showMessageDialog(null, "Dados atualizados!");
-            }else{
-                JOptionPane.showMessageDialog(null, "Nenhum dado alterado!");
-            }
-            TelaResponsavel telaResponsavel = new TelaResponsavel(usuario);
-            telaResponsavel.setVisible(true);
-            dispose();
-        }else{
-            JOptionPane.showMessageDialog(null, "Todos os campos são obrigatorios!!!");
-        }
+//        if (verificaCampos()){
+//            if (comparaCampos() != null){
+//                controle.update(comparaCampos(), responsavel.getIdresponsavel());
+//                JOptionPane.showMessageDialog(null, "Dados atualizados!");
+//            }else{
+//                JOptionPane.showMessageDialog(null, "Nenhum dado alterado!");
+//            }
+//            TelaResponsavel telaResponsavel = new TelaResponsavel(usuario);
+//            telaResponsavel.setVisible(true);
+//            dispose();
+//        }else{
+//            JOptionPane.showMessageDialog(null, "Todos os campos são obrigatorios!!!");
+//        }
     }//GEN-LAST:event_jButtonCadMotoActionPerformed
 
     private void jButtonVoltarMotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarMotoActionPerformed

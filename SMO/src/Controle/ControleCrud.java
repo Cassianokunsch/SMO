@@ -16,9 +16,9 @@ import java.util.List;
 import javax.swing.JButton;
 import javax.swing.JTable;
 import javax.swing.ListSelectionModel;
-import visao.TelaCrud;
-import visao.TelasCadastro.TelaCadMotorista;
-import visao.TelasUpdate.TelaUpdateMotorista;
+import visaoo.TelaCrud;
+import visaoo.TelasCadastro.TelaCadMotorista;
+import visaoo.TelasUpdate.TelaUpdateMotorista;
 
 /**
  *
@@ -42,13 +42,13 @@ public class ControleCrud {
     public void showCrud() {
         telacrud.setVisible(true);
     }
-    
-    public void selectAtt(String tipo){
-        if ("Motorista".equals(tipo)){
+
+    public void selectAtt(String tipo) {
+        if ("Motorista".equals(tipo)) {
             atualiza();
         }
     }
-    
+
     public void setActions() {
         actionButtonCadastrar();
     }
@@ -75,8 +75,10 @@ public class ControleCrud {
                 if ("Motorista".equals(opcao)) {
                     String id = String.valueOf(telacrud.getjTable().getModel().getValueAt(telacrud.getjTable().getSelectedRow(), 0));
                     List result = motoristaDao.getDados(Motorista.class, "pessoa", id);
-                    TelaUpdateMotorista telaUpdateMotorista = new TelaUpdateMotorista(result);
-        telaUpdateMotorista.setVisible(true);
+                    ControleUpdateMotorista controleUpdateMotorista = new ControleUpdateMotorista(result);
+                    controleUpdateMotorista.showTelaUpdateMotorista();
+                    //TelaUpdateMotorista telaUpdateMotorista = new TelaUpdateMotorista(result);
+                    //telaUpdateMotorista.setVisible(true);
                 }
                 telacrud.setVisible(false);
             }
@@ -111,7 +113,7 @@ public class ControleCrud {
             "Email", "CPF", "Cidade", "UF", "Telefone",
             "Bairro", "RG", "Nascimento", "CNH", "Validade CNH"};
         System.err.println("to aqui");
-        List result = motoristaDao.listData();        
+        List result = motoristaDao.listData();
         for (Iterator iterator = result.iterator(); iterator.hasNext();) {
             Motorista motorista = (Motorista) iterator.next();
             dados.add(new Object[]{motorista.getIdpessoa(), motorista.getNome(),

@@ -350,15 +350,15 @@ public class TelaCadUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonVoltarMotoActionPerformed
 
     private void jButtonCadMotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadMotoActionPerformed
-        if (verificaCampos()){
-            controle.inserir(criaUsuario());
-            JOptionPane.showMessageDialog(null, "Usuario cadastrado!!!");
-            TelaCrud telaUsuario = new TelaCrud(usuario2);
-            telaUsuario.setVisible(true);
-            dispose();
-        }else{
-            JOptionPane.showMessageDialog(null, "Todos os campos são obrigatorios!!!");
-        }
+//        if (verificaCampos()){
+//            controle.inserir(criaUsuario());
+//            JOptionPane.showMessageDialog(null, "Usuario cadastrado!!!");
+//            TelaCrud telaUsuario = new TelaCrud(usuario2);
+//            telaUsuario.setVisible(true);
+//            dispose();
+//        }else{
+//            JOptionPane.showMessageDialog(null, "Todos os campos são obrigatorios!!!");
+//        }
     }//GEN-LAST:event_jButtonCadMotoActionPerformed
 
     /**

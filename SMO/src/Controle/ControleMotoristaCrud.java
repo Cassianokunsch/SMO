@@ -5,20 +5,12 @@
  */
 package Controle;
 
-import Model.Motorista;
-import Model.Usuario;
 import ModelDao.GenericDAOImpl;
-import Util.TabelaDados;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 import javax.swing.JButton;
-import javax.swing.JTable;
-import javax.swing.ListSelectionModel;
-import Visao.TelaCrud;
-import visao.TelasCadastro.TelaCadMotorista;
+import visaoo.TelaCrud;
+import visaoo.TelasCadastro.TelaCadMotorista;
 
 /**
  *

@@ -366,19 +366,19 @@ public class TelaUpdateDoador extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonVoltarMotoActionPerformed
 
     private void jButtonCadMoto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadMoto1ActionPerformed
-        if (verificaCampos()){
-            if (comparaCampos() != null){
-                controle.update(comparaCampos(), doador.getIddoador());
-                JOptionPane.showMessageDialog(null, "Dados atualizados!");
-            }else{
-                JOptionPane.showMessageDialog(null, "Nenhum dado alterado!");
-            }
-            TelaDoador telaDoador = new TelaDoador(usuario);
-            telaDoador.setVisible(true);
-            dispose();
-        }else{
-            JOptionPane.showMessageDialog(null, "Todos os campos são obrigatorios!!!");
-        }
+//        if (verificaCampos()){
+//            if (comparaCampos() != null){
+//                controle.update(comparaCampos(), doador.getIddoador());
+//                JOptionPane.showMessageDialog(null, "Dados atualizados!");
+//            }else{
+//                JOptionPane.showMessageDialog(null, "Nenhum dado alterado!");
+//            }
+//            TelaDoador telaDoador = new TelaDoador(usuario);
+//            telaDoador.setVisible(true);
+//            dispose();
+//        }else{
+//            JOptionPane.showMessageDialog(null, "Todos os campos são obrigatorios!!!");
+//        }
     }//GEN-LAST:event_jButtonCadMoto1ActionPerformed
 
     private void jButtonVoltarMoto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarMoto1ActionPerformed
@@ -553,27 +553,27 @@ public class TelaUpdateDoador extends javax.swing.JFrame {
         }        
     }
     private void atualiza() {
-        ArrayList dados = new ArrayList();
-        String [] colunas = new String[]{"ID", "Nome", "Endereço", "RG"};
-        List result = controleResponsavel.listaResponsavel();
-        for (Iterator iterator = result.iterator(); iterator.hasNext();) {
-            Responsavel responsavel = (Responsavel) iterator.next();
-            dados.add(new Object[]{responsavel.getIdresponsavel(),
-                responsavel.getNome(), responsavel.getCpf(),
-                responsavel.getRg()});
-        }
-        TabelaDados tabela = new TabelaDados(dados, colunas);
-        jTableResponsavel.setModel(tabela);
-        jTableResponsavel.getTableHeader().setReorderingAllowed(false);
-        jTableResponsavel.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-        
-        for (int i = 0; i < jTableResponsavel.getModel().getRowCount(); i++){
-            int id  = (int) jTableResponsavel.getModel().getValueAt(i, 0);
-            int iddoador = doador.getIddoador();
-            if(iddoador == id){
-                jTableResponsavel.getModel().getValueAt(i, 0);
-            }
-        }
+//        ArrayList dados = new ArrayList();
+//        String [] colunas = new String[]{"ID", "Nome", "Endereço", "RG"};
+//        List result = controleResponsavel.listaResponsavel();
+//        for (Iterator iterator = result.iterator(); iterator.hasNext();) {
+//            Responsavel responsavel = (Responsavel) iterator.next();
+//            dados.add(new Object[]{responsavel.getIdresponsavel(),
+//                responsavel.getNome(), responsavel.getCpf(),
+//                responsavel.getRg()});
+//        }
+//        TabelaDados tabela = new TabelaDados(dados, colunas);
+//        jTableResponsavel.setModel(tabela);
+//        jTableResponsavel.getTableHeader().setReorderingAllowed(false);
+//        jTableResponsavel.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+//        
+//        for (int i = 0; i < jTableResponsavel.getModel().getRowCount(); i++){
+//            int id  = (int) jTableResponsavel.getModel().getValueAt(i, 0);
+//            int iddoador = doador.getIddoador();
+//            if(iddoador == id){
+//                jTableResponsavel.getModel().getValueAt(i, 0);
+//            }
+//        }
         
         
     }

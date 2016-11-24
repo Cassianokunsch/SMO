@@ -344,26 +344,26 @@ public class TelaUpdateUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldTelefoneActionPerformed
 
     private void jButtonAtualizaMotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtualizaMotoActionPerformed
-        if (verificaCampos()){
-            if (comparaCampos() != null){
-                controle.update(comparaCampos(), usuario.getIdusuario());
-                JOptionPane.showMessageDialog(null, "Dados atualizados!");
-            }else{
-                JOptionPane.showMessageDialog(null, "Nenhum dado alterado!");
-            }
-            TelaCrud telaUsuario = new TelaCrud(usuario2);
-            telaUsuario.setVisible(true);
-            dispose();
-        }else{
-            JOptionPane.showMessageDialog(null, "Todos os campos são obrigatorios!!!");
-        }
+//        if (verificaCampos()){
+//            if (comparaCampos() != null){
+//                controle.update(comparaCampos(), usuario.getIdusuario());
+//                JOptionPane.showMessageDialog(null, "Dados atualizados!");
+//            }else{
+//                JOptionPane.showMessageDialog(null, "Nenhum dado alterado!");
+//            }
+//            TelaCrud telaUsuario = new TelaCrud(usuario2);
+//            telaUsuario.setVisible(true);
+//            dispose();
+//        }else{
+//            JOptionPane.showMessageDialog(null, "Todos os campos são obrigatorios!!!");
+//        }
     }//GEN-LAST:event_jButtonAtualizaMotoActionPerformed
 
     private void jButtonVoltarMotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarMotoActionPerformed
-        // TODO add your handling code here:
-        TelaCrud telaUsuario = new TelaCrud(usuario2);
-        telaUsuario.setVisible(true);
-        dispose();
+//        // TODO add your handling code here:
+//        TelaCrud telaUsuario = new TelaCrud(usuario2);
+//        telaUsuario.setVisible(true);
+//        dispose();
     }//GEN-LAST:event_jButtonVoltarMotoActionPerformed
 
     /**

@@ -8,8 +8,8 @@ package Controle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JMenuItem;
-import Visao.TelaMotorista;
-import Visao.TelaPrincipal;
+import visaoo.TelaMotorista;
+import visaoo.TelaPrincipal;
 
 /**
  *
@@ -43,7 +43,6 @@ public class ControlePrincipal {
         menuItemMotorista.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //ControleMotoristaCrud controleMotoristaCrud = new ControleMotoristaCrud();
                 ControleCrud controleCrud = new ControleCrud("Motorista");
                 controleCrud.showCrud();                        
                 visaoPrincipal.setVisible(false);

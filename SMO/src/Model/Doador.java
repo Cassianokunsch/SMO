@@ -27,7 +27,7 @@ public class Doador extends Pessoa implements java.io.Serializable {
     private Set<Orgao> orgaos = new HashSet(0);
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "idresponsavel", nullable = false)
+    @JoinColumn(name = "idpessoa", nullable = false)
     public Responsavel getResponsavel() {
         return this.responsavel;
     }
@@ -37,7 +37,7 @@ public class Doador extends Pessoa implements java.io.Serializable {
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "idusuario", nullable = false)
+    @JoinColumn(name = "idpessoa", nullable = false)
     public Usuario getUsuario() {
         return this.usuario;
     }

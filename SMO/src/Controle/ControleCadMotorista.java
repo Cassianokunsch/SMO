@@ -14,7 +14,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
-import visao.TelasCadastro.TelaCadMotorista;
+import visaoo.TelasCadastro.TelaCadMotorista;
 
 /**
  *

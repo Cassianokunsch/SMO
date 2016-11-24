@@ -78,7 +78,7 @@ public class Transporte implements java.io.Serializable {
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "idmotorista", nullable = false)
+    @JoinColumn(name = "idpessoa", nullable = false)
     public Motorista getMotorista() {
         return this.motorista;
     }
