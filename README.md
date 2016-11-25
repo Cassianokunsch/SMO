@@ -7,10 +7,10 @@ Trabalho desenvolvido durante a disciplina de BD e POO2
 Cassiano Künsch das Neves<br>
 
 ###2	INTRODUÇÃO E MOTIVAÇAO<br>
-Este documento contém a especificação de uma aplicação que será usada para a diciplina de banco de dados SMO e POO2.<br>
+Este documento contém a especificação de uma aplicação que será usada para a disciplina de Banco de Dados 1 e Programação Orientada a Objetos 2 do Curso de Sistemas de Informação/IFES Campus Serra.<br>
 
 ###3	MINI-MUNDO<br>
-Criar uma aplicação com integração com banco de dados e orientada a objetos com aplicação de padrões de projeto. Essa aplicação será resposável basicamente gerar relatórios, cadastrar usuários do sistema e do negócio, e monitorar em tempo real caixas que transportam Órgãos.
+Hoje no estado do Espirito Santo existe um órgão público chamado Central de Notificação, Captação e Distribuição de Órgãos do Espírito Santo (CNCDO/ES). Esse órgão coordena o funcionamento da iniciativa e as demais ações, como gerenciamento da lista de espera e controle e fiscalização das atividades de doações e transplantes do Estado. Visto isso o objetivo do trabalho é tentar criar uma aplicação desktop que controlará as atividades de doações, transplante e transporte, a aplicação também fará relatórios de transportes e transplantes.
 
 ###4    REQUISITOS DE USUÁRIO<br>
 
@@ -48,11 +48,47 @@ Criar uma aplicação com integração com banco de dados e orientada a objetos 
 | RN07 | Toda ação que for realizada no sistema deve-se guardar o usuário                               |     Alta    |
 
 ####4.4 TECNOLOGIA USADA
-Para a interface gráfica com o usuário será usada a Swing pertecente ao Java pois, ela prove um rapido desenvolvimento.
+Nesta seção descrevemos objetivamente as tecnologias utilizadas na primeira parte do desenvolvimento do projeto.
 
-A linguagem que será usada vai ser Java pois, é uma liguagem orientada a objetos e de pouco domínio dos integrantes do grupo, assim podendo melhorar as habilidades com a mesma.
+O sistema em questão trata-se de um Sistema de Informação e levando em consideração suas características, optamos por escolher as seguintes tecnologias:
+| Ferramenta | Tipo                                      |
+| ---------- |:-----------------------------------------:|
+|Ferramenta	 |:Tipo                                      |
+|Java        |:Linguagem,de Programação                  |
+|PostgreSQL	 |:Banco,de Dados Relacional                 |
+|JPA	       |:API,de Persistência                       |
+|JDBC        |:API,de Persistência                       |
+|Hibernate   |:Frameworks de Mapeamento objeto/relacional|
+|Driver      |:Driver API-Nativo                         |
+|Java        |:Swing	API,de Interface Gráfica           |
 
-Para o banco de dados será usado o Postgress pois, foi esse o indicado pelo professor de BD1.
+JAVA
+
+Como o sistema não será nosso, mas sim do Corpo de Bombeiros Militar do Espírito Santo - CBMES, optamos por utilizar uma linguagem já utilizada dentro da corporação, para assim facilitar manutenção que será aplicada pelos mesmos.
+
+PostgreSQL
+
+Optamos pelo PostgreSQL pelo mesmo motivo que optamos pelo JAVA, facilitar a manutenção por parte da CBMES. Além de ser um banco bem robusto e ser open source.
+
+JPA
+
+JPA é uma especificação de Persistência da plataforma Java, para persistir as classes java em bancos de dados relacionais. Java Persistence API. Usaremos ela para facilitar a utilização do banco em Java.
+
+JDBC
+
+JDBC é um conjunto de classes e interfaces (API) escritas em Java que fazem o envio de instruções SQL para qualquer banco de dados relacional. O JDBC será usado por nós por ser uma API de baixo nível e servir de base para a API JPA de mais alto nível.
+
+Hibernate
+
+Hibernate é um framework de mapeamento objeto/relacional que implementa as funcionalidades da JPA. Usaremos esse framework para simplificar o desenvolvimento.
+
+Driver
+
+O driver API-Nativo traduz as chamadas JDBC para as chamadas da API cliente do banco de dados usado. Como a Ponte JDBC-ODBC. Será usado por nós para para conectar e interagir com a base de dados (sdro) desenvolvida por nós.
+
+Java Swing
+
+O Swing é um framework que disponibiliza um conjunto de elementos gráficos para ser utilizado na plataforma Java.
 ###5 DIAGRAMA DE CLASSE
 
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Class%20Diagram0.jpg "Title")
