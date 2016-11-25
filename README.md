@@ -51,16 +51,16 @@ Hoje no estado do Espirito Santo existe um órgão público chamado Central de N
 Nesta seção descrevemos objetivamente as tecnologias utilizadas na primeira parte do desenvolvimento do projeto.
 
 O sistema em questão trata-se de um Sistema de Informação e levando em consideração suas características, optamos por escolher as seguintes tecnologias:
+
 | Ferramenta | Tipo                                     |
 | ---------- |:----------------------------------------:|
-|Ferramenta	 |Tipo                                      |
-|Java        |Linguagem,de Programação                  |
-|PostgreSQL	 |Banco,de Dados Relacional                 |
-|JPA	       |API,de Persistência                       |
-|JDBC        |API,de Persistência                       |
+|Java        |Linguagem de Programação                  |
+|PostgreSQL	 |Banco de Dados Relacional                 |
+|JPA	       |API de Persistência                       |
+|JDBC        |API de Persistência                       |
 |Hibernate   |Frameworks de Mapeamento objeto/relacional|
 |Driver      |Driver API-Nativo                         |
-|Java        |Swing	API,de Interface Gráfica            |
+|Java        |Swing	API de Interface Gráfica            |
 
 JAVA
 
