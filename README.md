@@ -87,6 +87,8 @@ O Swing é um framework que disponibiliza um conjunto de elementos gráficos par
 
 ###6 TELAS DO SISTEMA
 
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Tela%20Login.png "Title")
+
 ###5 DIAGRAMA DE CLASSE
 
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Class%20Diagram0.jpg "Title")
