@@ -61,27 +61,27 @@ O sistema em questão trata-se de um Sistema de Informação e levando em consid
 |Hibernate   |Frameworks de Mapeamento objeto/relacional|
 |Java        |Swing	API de Interface Gráfica            |
 
-*JAVA
+- JAVA
 
 Foi optada essa linguagem de programação pois, é de maior domínio dos integrantes do grupo. Além de ser uma linguagem gratuita.
 
-PostgreSQL
+- PostgreSQL
 
 Optamos pelo PostgreSQL por ser um banco bem robusto e ser open source.
 
-JPA
+- JPA
 
 JPA é uma especificação de Persistência da plataforma Java, para persistir as classes java em bancos de dados relacionais. Java Persistence API. Usaremos ela para facilitar a utilização do banco em Java.
 
-JDBC
+- BC
 
 JDBC é um conjunto de classes e interfaces (API) escritas em Java que fazem o envio de instruções SQL para qualquer banco de dados relacional. O JDBC será usado por nós por ser uma API de baixo nível e servir de base para a API JPA de mais alto nível.
 
-Hibernate
+- bernate
 
 Hibernate é um framework de mapeamento objeto/relacional que implementa as funcionalidades da JPA. Usaremos esse framework para simplificar o desenvolvimento.
 
-Java Swing
+- Java Swing
 
 O Swing é um framework que disponibiliza um conjunto de elementos gráficos para ser utilizado na plataforma Java, usado para desenhasr as telas da aplicação.
 
