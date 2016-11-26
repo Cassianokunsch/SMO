@@ -335,22 +335,25 @@ TABLE USUARIO: Tabela que guarda as informações do usuario do sistema.
 
 
 ###10	TABELAS E PRINCIPAIS CONSULTAS<br>
-####10.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
-![Alt text](https://github.com/Cassianokunsch/SMO/tree/master/C%C3%B3digos%20SQL/9.1)
+####10.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas)
+- https://github.com/Cassianokunsch/SMO/tree/master/C%C3%B3digos%20SQL/9.1
 ####10.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 3)
-https://github.com/Cassianokunsch/SMO/tree/master/C%C3%B3digos%20SQL/9.1
+- https://github.com/Cassianokunsch/SMO/tree/master/C%C3%B3digos%20SQL/9.2
 
-####10.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E CAMPOS RENOMEADOS (Mínimo 2)<br>
-####10.4	CONSULTAS QUE USAM OPERADORES LIKE (Mínimo 3) <br>
-####10.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
-####10.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Todas Junções)<br>
+####10.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E CAMPOS RENOMEADOS (Mínimo 2)
+- https://github.com/Cassianokunsch/SMO/tree/master/C%C3%B3digos%20SQL/9.3
+####10.4	CONSULTAS QUE USAM OPERADORES LIKE (Mínimo 3)
+- https://github.com/Cassianokunsch/SMO/tree/master/C%C3%B3digos%20SQL/9.4
+####10.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)
+- https://github.com/Cassianokunsch/SMO/tree/master/C%C3%B3digos%20SQL/9.5
+####10.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Todas Junções)
         Entrega até este ponto em 22/11/2016
-####10.7	CONSULTAS COM GROUP BY (Mínimo 5)<br>
-####10.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)<br>
-####10.9	CONSULTAS COM SELF JOIN E VIEW (Todas Possíveis)<br>
-####10.10	SUBCONSULTAS (Mínimo 3)<br>
+####10.7	CONSULTAS COM GROUP BY (Mínimo 5)
+- https://github.com/Cassianokunsch/SMO/tree/master/C%C3%B3digos%20SQL/9.7
+####10.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)
+####10.9	CONSULTAS COM SELF JOIN E VIEW (Todas Possíveis)
+####10.10	SUBCONSULTAS (Mínimo 3)
         Entrega até este ponto em 29/11/2016
-###11	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
-###12	DIFICULDADES ENCONTRADAS PELO GRUPO<br>
-
-https://github.com/Cassianokunsch/SMO/tree/master/C%C3%B3digos%20SQL/9.1
+###11	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)
+###12	DIFICULDADES ENCONTRADAS PELO GRUPO
+- O grupo nã encontrou nenhuma dificuldade relação a criação do banco. Apenas em como estrutura-lo.
