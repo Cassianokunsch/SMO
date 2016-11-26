@@ -364,4 +364,4 @@ https://github.com/Cassianokunsch/SMO/tree/master/C%C3%B3digos%20SQL/9.7
 ###11	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)
 
 ###12	DIFICULDADES ENCONTRADAS PELO GRUPO
-- O grupo nã encontrou nenhuma dificuldade relação a criação do banco. Apenas em como estrutura-lo.
+- O grupo não encontrou nenhuma dificuldade relação a criação do banco. Apenas em como estrutura-lo.
