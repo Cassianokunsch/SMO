@@ -210,7 +210,7 @@ Nessa tela o usuário irá cadastrar o responsável pelo doador.
 
 ###7 MODELO CONCEITUAL
 
-![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Modelo%20conceitual.jpg)
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Modelos/Conceitual/Modelo%20conceitual.jpg)
 o
 ####7.1 Validação do Modelo Conceitual
 [Grupo01]: [Pedro Henrique e Romildo Costa Silva]
@@ -308,11 +308,11 @@ TABLE USUARIO: Tabela que guarda as informações do usuario do sistema.
 
 ###8 MODELO LÓGICO
 
-![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Modelo%20l%C3%B3gico.jpg)
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Modelos/L%C3%B3gico/Modelo%20l%C3%B3gico.jpg)
 
 ###8	MODELO FÍSICO<br>
 
-https://github.com/Cassianokunsch/SMO/blob/master/C%C3%B3digos%20SQL/CRIACAO%20DO%20BANCO%20SMO.sql
+https://github.com/Cassianokunsch/SMO/blob/master/Modelos/F%C3%ADsico/CRIACAO%20DO%20BANCO%20SMO.sql
 
 ###9	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 ####9.1 DETALHAMENTO DAS INFORMAÇÕES
