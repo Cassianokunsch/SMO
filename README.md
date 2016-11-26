@@ -212,11 +212,25 @@ Nessa tela o usuário irá cadastrar o responsável pelo doador.
 
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Modelo%20conceitual.jpg)
 
-###5 DIAGRAMA DE CLASSE
+####7.1 Validação do Modelo Conceitual
+[Grupo01]: [Pedro Henrique e Romildo Costa Silva]
+[Grupo02]: [Ian]
 
-![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Class%20Diagram0.jpg "Title")
+####7.2 DECISÕES DE PROJETO
 
-###6 MODELO CONCEITUAL
-![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/BD.jpg "Title")
+[atributo]: [descrição da decisão]
 
+EXEMPLO:
+a) Campo endereço: em nosso projeto optamos por um campo multivalorado e composto, pois a empresa 
+pode possuir para cada departamento mais de uma localização... 
+b) justifique!
 
+####7.3 DESCRIÇÃO DOS DADOS
+
+[objeto]: [descrição do objeto]
+
+EXEMPLO:
+CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
+CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
+
+###8 MODELO LÓGICO
