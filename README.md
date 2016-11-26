@@ -87,11 +87,18 @@ O Swing é um framework que disponibiliza um conjunto de elementos gráficos par
 
 ###6 TELAS DO SISTEMA
 
+- Na tela de login
+Só pessoas autorizadas pode entrar no sistema.
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Tela%20Login.png "Title")
 
 
+- Na tela principal
+
+    Onde tem todas as opções disponíveis.
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Tela%20principal.png)
 
+
+- Tela de cadastro de Aparelhos
 
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Cadastro%20Aparelho.png)
 
