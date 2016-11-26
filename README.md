@@ -59,16 +59,15 @@ O sistema em questão trata-se de um Sistema de Informação e levando em consid
 |JPA	       |API de Persistência                       |
 |JDBC        |API de Persistência                       |
 |Hibernate   |Frameworks de Mapeamento objeto/relacional|
-|Driver      |Driver API-Nativo                         |
 |Java        |Swing	API de Interface Gráfica            |
 
 JAVA
 
-Como o sistema não será nosso, mas sim do Corpo de Bombeiros Militar do Espírito Santo - CBMES, optamos por utilizar uma linguagem já utilizada dentro da corporação, para assim facilitar manutenção que será aplicada pelos mesmos.
+Foi optada essa linguagem de programação pois, é de maior domínio dos integrantes do grupo. Além de ser uma linguagem gratuita.
 
 PostgreSQL
 
-Optamos pelo PostgreSQL pelo mesmo motivo que optamos pelo JAVA, facilitar a manutenção por parte da CBMES. Além de ser um banco bem robusto e ser open source.
+Optamos pelo PostgreSQL por ser um banco bem robusto e ser open source.
 
 JPA
 
@@ -82,13 +81,10 @@ Hibernate
 
 Hibernate é um framework de mapeamento objeto/relacional que implementa as funcionalidades da JPA. Usaremos esse framework para simplificar o desenvolvimento.
 
-Driver
-
-O driver API-Nativo traduz as chamadas JDBC para as chamadas da API cliente do banco de dados usado. Como a Ponte JDBC-ODBC. Será usado por nós para para conectar e interagir com a base de dados (sdro) desenvolvida por nós.
-
 Java Swing
 
-O Swing é um framework que disponibiliza um conjunto de elementos gráficos para ser utilizado na plataforma Java.
+O Swing é um framework que disponibiliza um conjunto de elementos gráficos para ser utilizado na plataforma Java, usado para desenhasr as telas da aplicação.
+
 ###5 DIAGRAMA DE CLASSE
 
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Class%20Diagram0.jpg "Title")
