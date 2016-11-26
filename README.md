@@ -361,6 +361,21 @@ https://github.com/Cassianokunsch/SMO/tree/master/C%C3%B3digos%20SQL/9.7
 ####10.10	SUBCONSULTAS (Mínimo 3)
         Entrega até este ponto em 29/11/2016
         
+###11 DESCRIÇÃO DOS PADRÕES DE PROJETO UTILIZADOS
+
+- MVC
+De acordo com GAMMA (1998), MVC consiste em três tipos de objetos que compõem camadas bem definidas: Modelo (Model) é o objeto da aplicação, responsável por implementar a lógica da regras de negócio tal qual o armazenamento persistente. Visão (View) é camada que compõe a apresentação do sistema para o usuário. RUBY (2009) define o controlador (Controller) conduz a aplicação recebendo eventos do mundo externo, interagindo com o modelo e exibe uma visão apropriada.
+
+Outro motivo que levou o grupo a escoher esse padrão foi que esse padrão se bem aplicado e estruturado corretamente, a troca de Views, por exemplo, se eu apliquei esse padrão para criar uma interface desktop e quiser mudar para uma interface web, eu apenas preciso fazer alterações na visão, sem precisa mexer em nada no Controle e no Modelo.
+
+- DAO - Data Access Object
+
+Foi escolhido esse padrão pois, é um padrão para persistência de dados que permite separar regras de negócio das regras de acesso a banco de dados fornecendo uma interface para que as diversas outras camadas da aplicação possam se comunicar com o data source, com o padrão MVC a camada seria o Controle.
+
+- Singleton
+
+O objetivo do Singleton é garantir que uma classe tenha somente uma instância e fornece um ponto global de acesso para a mesma. Com o uso do padrão garantimos que só teremos uma instância de um determinada classe, e como na aplicação temos várias telas e vários controles sendo chamados, esse padrão vai garantir que não usemos mais memória do que precisamos.
+
 ###11	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)
 
 ###12	DIFICULDADES ENCONTRADAS PELO GRUPO
