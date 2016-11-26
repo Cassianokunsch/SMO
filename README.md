@@ -61,7 +61,7 @@ O sistema em questão trata-se de um Sistema de Informação e levando em consid
 |Hibernate   |Frameworks de Mapeamento objeto/relacional|
 |Java        |Swing	API de Interface Gráfica            |
 
-JAVA
+*JAVA
 
 Foi optada essa linguagem de programação pois, é de maior domínio dos integrantes do grupo. Além de ser uma linguagem gratuita.
 
