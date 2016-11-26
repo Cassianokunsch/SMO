@@ -88,56 +88,121 @@ O Swing é um framework que disponibiliza um conjunto de elementos gráficos par
 ###6 TELAS DO SISTEMA
 
 - Na tela de login
-Só pessoas autorizadas pode entrar no sistema.
+
+Nessa tela o usuário entrará com o login e a senha para poder acessar o sistema.
+
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Tela%20Login.png "Title")
 
 
 - Na tela principal
 
-    Onde tem todas as opções disponíveis.
+Nessa tela é onde o usuário terá acesso as funcionalidades do sistema.
+
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Tela%20principal.png)
 
 
 - Tela de cadastro de Aparelhos
 
+Nessa tela o usuário irá cadastrar os aparelhos que monitoraram a temperatura e localização das caixas utilizadas para o transporte.
+
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Cadastro%20Aparelho.png)
 
+
+- Tela de cadastro de Caixas
+
+Nessa tela o usuário irá cadastrar as caixas utilizadas para o transporte de órgãos.
 
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Cadastro%20Caixa.png)
 
 
+- Tela de cadastro de Doadores
+
+Nessa tela o usuário irá cadastrar os Doadores que doaram seus orgãos para serem transplantados.
+
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Cadastro%20Doador.png)
 
+
+- Tela de cadastro de Motoristas
+
+Nessa tela o usuário irá cadastrar os Motoristas que realizaram o transporte dos orgãos para serem transplantados.
 
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Cadastro%20Motorista.png)
 
 
+- Tela de cadastro de Órgão
+
+Nessa tela o usuário irá cadastrar os Órgãos para serem transplantados.
+
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Cadastro%20Org%C3%A3o.png)
 
+
+- Tela de cadastro de Receptor
+
+Nessa tela o usuário irá cadastrar os Receptores, são aqueles que iram receber o órgão.
 
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Cadastro%20Receptor.png)
 
 
+- Tela de cadastro de Transplante
+
+Nessa tela o usuário irá cadastrar o Transplante que vai ser realizado do órgão.
+
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Cadastro%20Transplante.png)
 
+
+
+- Tela de cadastro de Transporte
+
+Nessa tela o usuário irá cadastrar o Transporte que vai ser realizado do órgão.
 
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Cadastro%20Transporte.png)
 
 
+
+- Tela de cadastro de Transporte
+
+Nessa tela o usuário irá cadastrar o Transporte que vai ser realizado do órgão.
+
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Cadastro%20usuario.png)
 
+
+
+- Tela de Autorização para monitorar o órgão
+
+Nessa tela o usuário irá colocar as credenciais para pode ter acesso ao monitoramento do órgão.
 
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Consultar%20Orgao.png)
 
 
+
+- Tela Monitorar
+
+Nessa tela o usuário irá ver todas as informações sobre o órgão em transporte
+
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Monitorar.png)
 
+
+
+- Tela Relatório
+
+Nessa tela o usuário irá colocar um filtro para gerar um relatório dos transportes feitos.
 
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Relatorio.png)
 
 
+
+- Tela de CRUD
+
+Nessa tela o usuário poderá fazer as operações de Cadastrar, Excluir, Visualizar e Editar.
+OBS.: essa vai ser uma tela padrao para todos os outros cadastros que serão realizados.
+
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Tela%20crud.png)
 
+
+
+- Tela de cadastrar Responsável
+
+Nessa tela o usuário irá cadastrar o responsável pelo doador.
 
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Cadastro%20Respons%C3%A1vel.png)
 
