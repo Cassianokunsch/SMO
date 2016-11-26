@@ -88,6 +88,22 @@ O Swing é um framework que disponibiliza um conjunto de elementos gráficos par
 ###6 TELAS DO SISTEMA
 
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Tela%20Login.png "Title")
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Tela%20principal.png)
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Cadastro%20Aparelho.png)
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Cadastro%20Caixa.png)
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Cadastro%20Doador.png)
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Cadastro%20Motorista.png)
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Cadastro%20Org%C3%A3o.png)
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Cadastro%20Receptor.png)
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Cadastro%20Transplante.png)
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Cadastro%20Transporte.png)
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Cadastro%20usuario.png)
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Consultar%20Orgao.png)
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Monitorar.png)
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Relatorio.png)
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Tela%20crud.png)
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Mockups/Cadastro%20Respons%C3%A1vel.png)
+
 
 ###5 DIAGRAMA DE CLASSE
 
