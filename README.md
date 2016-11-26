@@ -306,13 +306,6 @@ TABLE USUARIO: Tabela que guarda as informações do usuario do sistema.
 - SENHA: Guarda a senha.
 - OBS.: Essa tabela herda da tabela PESSOA então todos os campos da tabela PESSOA também pertencem a essa tabela.
 
-
-[objeto]: [descrição do objeto]
-
-EXEMPLO:
-CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
-CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
-
 ###8 MODELO LÓGICO
 
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Modelo%20l%C3%B3gico.jpg)
