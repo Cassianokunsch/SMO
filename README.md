@@ -234,3 +234,5 @@ CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
 CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
 
 ###8 MODELO LÓGICO
+
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Modelo%20l%C3%B3gico.jpg)
