@@ -47,7 +47,7 @@ Hoje no estado do Espirito Santo existe um órgão público chamado Central de N
 | RN06 | Um transporte só poderá ser criado se tiver uma caixa e um motorista relacionados a ele        |     Alta    |
 | RN07 | Toda ação que for realizada no sistema deve-se guardar o usuário                               |     Alta    |
 
-####4.4 TECNOLOGIA USADA
+###5 TECNOLOGIA USADA
 Nesta seção descrevemos objetivamente as tecnologias utilizadas na primeira parte do desenvolvimento do projeto.
 
 O sistema em questão trata-se de um Sistema de Informação e levando em consideração suas características, optamos por escolher as seguintes tecnologias:
@@ -84,6 +84,8 @@ Hibernate é um framework de mapeamento objeto/relacional que implementa as func
 - Java Swing
 
 O Swing é um framework que disponibiliza um conjunto de elementos gráficos para ser utilizado na plataforma Java, usado para desenhasr as telas da aplicação.
+
+###6 TELAS DO SISTEMA
 
 ###5 DIAGRAMA DE CLASSE
 
