@@ -312,9 +312,7 @@ TABLE USUARIO: Tabela que guarda as informações do usuario do sistema.
 
 ###8	MODELO FÍSICO<br>
 
-
-
-        Entrega até este ponto em 25/10/2016
+https://github.com/Cassianokunsch/SMO/blob/master/C%C3%B3digos%20SQL/CRIACAO%20DO%20BANCO%20SMO.sql
 
 ###9	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 ####9.1 DETALHAMENTO DAS INFORMAÇÕES
