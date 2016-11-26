@@ -73,11 +73,11 @@ Optamos pelo PostgreSQL por ser um banco bem robusto e ser open source.
 
 JPA é uma especificação de Persistência da plataforma Java, para persistir as classes java em bancos de dados relacionais. Java Persistence API. Usaremos ela para facilitar a utilização do banco em Java.
 
-- BC
+- JDBC
 
 JDBC é um conjunto de classes e interfaces (API) escritas em Java que fazem o envio de instruções SQL para qualquer banco de dados relacional. O JDBC será usado por nós por ser uma API de baixo nível e servir de base para a API JPA de mais alto nível.
 
-- bernate
+- Hibernate
 
 Hibernate é um framework de mapeamento objeto/relacional que implementa as funcionalidades da JPA. Usaremos esse framework para simplificar o desenvolvimento.
 
