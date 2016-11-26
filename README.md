@@ -218,75 +218,94 @@ Nessa tela o usuário irá cadastrar o responsável pelo doador.
 
 ####7.2 DECISÕES DE PROJETO
 
-[atributo]: [descrição da decisão]
-
-|  Atributo  | Descrição   da decisão |
-
-- IDTEMPERATURA: FOI DECIDIDO CRIAR UM CAMPO ESPECÍFICO PARA SER A CHAVE DA TABELA, TANTO POR QUESTÕES DE PERFOMANCE QUANTO POR ECONOMIA DE ARMAZENAMENTO.
-
-- IDORGAO: FOI DECIDIDO CRIAR UM CAMPO ESPECÍFICO PARA SER A CHAVE DA TABELA, TANTO POR QUESTÕES DE PERFOMANCE QUANTO POR ECONOMIA DE ARMAZENAMENTO.
-
-- IDTRANSPLANTE: FOI DECIDIDO CRIAR UM CAMPO ESPECÍFICO PARA SER A CHAVE DA TABELA, TANTO POR QUESTÕES DE PERFOMANCE QUANTO POR ECONOMIA DE ARMAZENAMENTO.
-
-- IDAPARELHO: FOI DECIDIDO CRIAR UM CAMPO ESPECÍFICO PARA SER A CHAVE DA TABELA, TANTO POR QUESTÕES DE PERFOMANCE QUANTO POR ECONOMIA DE ARMAZENAMENTO.
-
-IDCAIXA: FOI DECIDIDO CRIAR UM CAMPO ESPECÍFICO PARA SER A CHAVE DA TABELA, TANTO POR QUESTÕES DE PERFOMANCE QUANTO POR ECONOMIA DE ARMAZENAMENTO.
-
-IDTRANSPORTE: FOI DECIDIDO CRIAR UM CAMPO ESPECÍFICO PARA SER A CHAVE DA TABELA, TANTO POR QUESTÕES DE PERFOMANCE QUANTO POR ECONOMIA DE ARMAZENAMENTO.
-
-IDLOCALIZACAO: FOI DECIDIDO CRIAR UM CAMPO ESPECÍFICO PARA SER A CHAVE DA TABELA, TANTO POR QUESTÕES DE PERFOMANCE QUANTO POR ECONOMIA DE ARMAZENAMENTO.
-
-IDPESSOA: FOI DECIDIDO CRIAR UM CAMPO ESPECÍFICO PARA SER A CHAVE DA TABELA, TANTO POR QUESTÕES DE PERFOMANCE QUANTO POR ECONOMIA DE ARMAZENAMENTO.
-
-
-TERMOMETRO_INTERNO
-HORA_TEMP
-TERMOMETRO_EXTERNO
-HORA_CAPTACAO
-ORGAO
-TEMPO_VIDA
-DATA_TRANSPLANTE
-CAPACIDADE
-IDENTIFICACAO
-VALIDADE
-MODELO
-SERIE
-LONGITUDE
-HORA_LOC
-LATITUDE
-TEMP_FINAL
-DATA
-LATITUDE_INICIAL
-LONGITUDE_INICIAL
-HORA_SAIDA
-TEMP_INICIAL
-DESTINO
-ORIGEM
-LONGITUDE_FINAL
-LATITUDE_FINAL
-NOME
-CIDADE
-NASCIMENTO
-UF
-CEP
-RG
-CPF
-ENDERECO
-BAIRRO
-CNH
-VALIDADE_CNH
-TIPO_SANGUINEO
-HORA_OBITO
-LOGIN
-SENHA
-
-
-EXEMPLO:
-a) Campo endereço: em nosso projeto optamos por um campo multivalorado e composto, pois a empresa 
-pode possuir para cada departamento mais de uma localização... 
-b) justifique!
+- Foi sugerida uma ideia pelo professor de criar mais duas outras entidades CONTATO e TIPO_CONTATO, mas não foi implementada no banco por questões de tempo para entrar o projeto para outra disciplina.
 
 ####7.3 DESCRIÇÃO DOS DADOS
+
+TABLE TEMPERATURA: Tabela que guarda as temperaturas das caixa.
+- TERMOMETRO_INTERNO: Guarda a temperatura interna da caixa.
+- HORA_TEMP: Guarda a hora que foi coletadas as temperaturas.
+- TERMOMETRO_EXTERNO: Guarda a temperatura externa da caixa.
+
+TABLE ORGAO: Tabela que guarda as informações dos órgãos doados.
+- HORA_CAPTACAO: Guarda a hora da captação do órgão
+- ORGAO: Guarda o tipo do órgão(pulmão, coração)
+- TEMPO_VIDA TIME: Guarda o tempo de vida do órgão;
+
+TABLE TRANSPLANTE: Tabela que guarda as informações sobre os transplantes.
+- DATA_TRANSPLANTE:  Guarda a data que o transplante irá ser realizado.
+
+TABLE CAIXA: Tabela que guarda as informações sobre as caixas que transportam os órgãos.
+- CAPACIDADE: Guarda a capacidade da caixa em litros.
+- IDENTIFICACAO: Guarda a identificação da caixa.
+- VALIDADE: Guarda a validade da caixa.
+
+
+TABLE APARELHO: Tabela que guarda as informações do aparelho que monitora a caixa.
+- MODELO: Guarda o modelo do aparelho.
+- VALIDADE: Guarda a validade do aparelho.
+- SERIE: Guarda a série do aparelho.
+
+TABLE LOCALIZACAO: Tabela que guarda informações sobre a localização da caixa.
+- LONGITUDE: Guarda a longitude da caixa.
+- HORA_LOC: Guarda a hora que foram capturados os dados sobre localização da caixa.
+- LATITUDE: Guarda a latidute da caixa.
+
+TABLE TRANSPORTE (
+- TEMP_FINAL: Guarda a temperatura final da caixa depois do transporte ter sido realizado.
+- DATA: Guarda a data do transporte.
+- LATITUDE_INICIAL: Guarda a latitude inicial da caixa.
+- LONGITUDE_INICIAL: Guarda a longitute inicial da caixa.
+- HORA_SAIDA: Guarda a hora de saída da caixa para o transporte.
+- TEMP_INICIAL: Guarda a temperatura inicial da caixa.
+- DESTINO: Guarda o destino para onde a caixa irá ser transportada.
+- ORIGEM: Guarda a origem de onde a caixa foi enviada.
+- LONGITUDE_FINAL: Guadar a longitude final da caixa.
+- LATITUDE_FINAL: Guada a latidude final da caixa.
+
+TABLE PESSOA: Tabela que guarda os dados das pessoas (doador, usuario, motorista e etc)
+- NOME: Guarda o nome da pessoa.
+- CIDADE: Guarda a cidade da pessoa.
+- NASCIMENTO: Guarda a data de nascimento da pessoa.
+- UF: Guarda o estado da pessoa.
+- CEP: Guarda o CEP da pessoa.
+- RG: Guarda o RG da pessoa.
+- CPF: Guarda o CPF da pessoa.
+- ENDERECO: Guarda o endereço da pessoa.
+- BAIRRO: Guarda o bairro da pessoa.
+
+
+TABLE MOTORISTA: Tabela que guarda os motoristas responsáveis pelo transporte
+- CNH: Guarda o número da CNH do motorista.
+- TELEFONE: Guarda o telefone.
+- EMAIL: Guarda o email.
+- VALIDADE_CNH: Guarda a data de validade da CNH
+- OBS.: Essa tabela herda da tabela PESSOA então todos os campos da tabela PESSOA também pertencem a essa tabela.
+
+
+TABLE DOADOR: Tabela que guarda os doadores
+- TIPO_SANGUINEO: Guarda o tipo sanguineo.
+- HORA_OBITO: Guarda a hora de obito.
+- OBS.: Essa tabela herda da tabela PESSOA então todos os campos da tabela PESSOA também pertencem a essa tabela.
+
+TABLE RESPONSAVEL: Tabela que guarda os responsáveis pelo doador.
+- EMAIL: Guarda o email.
+- TELEFONE: Guarda o telefone
+- OBS.: Essa tabela herda da tabela PESSOA então todos os campos da tabela PESSOA também pertencem a essa tabela.
+
+TABLE RECEPTOR: Tabela que guarda os dados de quem vai receber os órgãos doador.
+- TIPO_SANGUINEO: Guarda o tipo sanguineo.
+- TELEFONE: Guarda o telefone
+- EMAIL: Guarda o email.
+- OBS.: Essa tabela herda da tabela PESSOA então todos os campos da tabela PESSOA também pertencem a essa tabela.
+
+TABLE USUARIO: Tabela que guarda as informações do usuario do sistema.
+- TELEFONE: Guarda o telefone
+- EMAIL: Guarda o email.
+- LOGIN: Guarda o login.
+- SENHA: Guarda a senha.
+- OBS.: Essa tabela herda da tabela PESSOA então todos os campos da tabela PESSOA também pertencem a essa tabela.
+
 
 [objeto]: [descrição do objeto]
 
