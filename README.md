@@ -379,7 +379,7 @@ O objetivo do Singleton é garantir que uma classe tenha somente uma instância 
 
 ###11 DIAGRAMA DE CLASSE
 
-![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Class%20Diagram0.jpg)
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Class%20Diagram0.png)
 
 ###11	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)
 
