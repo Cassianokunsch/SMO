@@ -377,6 +377,10 @@ Foi escolhido esse padrão pois, é um padrão para persistência de dados que p
 
 O objetivo do Singleton é garantir que uma classe tenha somente uma instância e fornece um ponto global de acesso para a mesma. Com o uso do padrão garantimos que só teremos uma instância de um determinada classe, e como na aplicação temos várias telas e vários controles sendo chamados, esse padrão vai garantir que não usemos mais memória do que precisamos.
 
+###11 DIAGRAMA DE CLASSE
+
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Class%20Diagram0.jpg)
+
 ###11	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)
 
 ###12	DIFICULDADES ENCONTRADAS PELO GRUPO
