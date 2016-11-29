@@ -213,8 +213,8 @@ Nessa tela o usuário irá cadastrar o responsável pelo doador.
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Modelos/Conceitual/Modelo%20conceitual.jpg)
 
 ####7.1 Validação do Modelo Conceitual
-[Grupo01]: [Pedro Henrique e Romildo Costa Silva]
-[Grupo02]: [Ian]
+[Grupo01]: Pedro Henrique e Romildo Costa Silva
+[Grupo02]: Yan Pitangui
 
 ####7.2 DECISÕES DE PROJETO
 
