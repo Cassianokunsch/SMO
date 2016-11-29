@@ -317,12 +317,10 @@ https://github.com/Cassianokunsch/SMO/blob/master/Modelos/F%C3%ADsico/CRIACAO%20
 
 ###9	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 ####9.1 DETALHAMENTO DAS INFORMAÇÕES
-        Detalhamento sobre as informações e processo de obtenção ou geração dos dados.
-        Referenciar todas as fontes referentes a :
-        a) obtenção dos dados
-        b) obtenção de códigos reutilizados
-        c) fontes de estudo para desenvolvimento do projeto
 
+        Para a obtenção dos dados:
+         - Localização e Temperatura: Os dados seriam pegos de um Arduino ou gerados aleatóriamente usando o Random do da Liguagem Python;
+         - Dados das outras entidades: Os dados seriam criados aleatóriamente por uma biblioteca do Python chamada de Faker;
 
 ####9.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELA E INSERÇÃO DOS DADOS
         a) inclusão das instruções para criação das tabelas e estruturas de amazenamento do BD
