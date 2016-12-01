@@ -370,13 +370,13 @@ Outro motivo que levou o grupo a escoher esse padrão foi que esse padrão se be
 
 Aplicação do padrão no projeto
 
-- Visão:
+Visão:
         Na camada visão ficaram todas as telas do sistema, que tem como funcionalidade receber e mostrar os dados digitados pelo usuário.
 
-- Controle:
+Controle:
         Na camada controle foram criados todos os controles das telas do sistema, um controle para cada tela. Os controles eram responsáveis por pegar os dados da tela, setar os dados na tela, fazer a persistencia no banco de dados, controlar todas as funcionalidades da tela.
 
-- Modelo:
+Modelo:
         Na camada modelo foram criadas as classes que representam as tabelas presentes no banco de dados.
 
 - DAO - Data Access Object
