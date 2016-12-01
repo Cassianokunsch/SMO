@@ -368,15 +368,31 @@ De acordo com GAMMA (1998), MVC consiste em três tipos de objetos que compõem 
 
 Outro motivo que levou o grupo a escoher esse padrão foi que esse padrão se bem aplicado e estruturado corretamente, a troca de Views, por exemplo, se eu apliquei esse padrão para criar uma interface desktop e quiser mudar para uma interface web, eu apenas preciso fazer alterações na visão, sem precisa mexer em nada no Controle e no Modelo.
 
-        - No projeto o MVC foi aplicado da seguinte maneira.
+Aplicação do padrão no projeto
+
+- Visão:
+        Na camada visão ficaram todas as telas do sistema, que tem como funcionalidade receber e mostrar os dados digitados pelo usuário.
+
+- Controle:
+        Na camada controle foram criados todos os controles das telas do sistema, um controle para cada tela. Os controles eram responsáveis por pegar os dados da tela, setar os dados na tela, fazer a persistencia no banco de dados, controlar todas as funcionalidades da tela.
+
+- Modelo:
+        Na camada modelo foram criadas as classes que representam as tabelas presentes no banco de dados.
 
 - DAO - Data Access Object
 
-Foi escolhido esse padrão pois, é um padrão para persistência de dados que permite separar regras de negócio das regras de acesso a banco de dados fornecendo uma interface para que as diversas outras camadas da aplicação possam se comunicar com o data source, com o padrão MVC a camada seria o Controle.
+Foi escolhido esse padrão pois, é um padrão para persistência de dados que permite separar regras de negócio das regras de acesso a banco de dados fornecendo uma interface para que as diversas outras camadas da aplicação possam se comunicar com o data source. Com o padrão MVC a camada seria o Controle.
 
-- Singleton
+Aplicação do padrão no projeto:
+        Foi criado uma classe com os métodos de insert, delete, pegar os dados do banco de dados, de maneira mais genérica possível para que se possa utilizar em todas as tabelas possíveis do banco de dados. Caso os métodos criados não dessem suporte a alguma busca ou inseção espeficica no banco de dados, seria criado essa funcionalidade a parte da classe genérica. Como foi o caso da consulta de usuário, mostrada abaixo.
+
+- Singleton:
 
 O objetivo do Singleton é garantir que uma classe tenha somente uma instância e fornece um ponto global de acesso para a mesma. Com o uso do padrão garantimos que só teremos uma instância de um determinada classe, e como na aplicação temos várias telas e vários controles sendo chamados, esse padrão vai garantir que não usemos mais memória do que precisamos.
+
+Aplicação do projeto:
+        O padrão Singleton no projeto foi aplicado no controle de instanciação dos objetos. Como a aplicação tem conexão a todo momento com o banco de dados, o padrao foi aplicado na classe que faz essa conexão, gerando apenas uma conexão com o banco.
+        Foi aplicado também as telas do sistema, para toda tela do 
 
 ###11 DIAGRAMA DE CLASSE
 
