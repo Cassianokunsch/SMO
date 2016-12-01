@@ -385,7 +385,7 @@ Foi escolhido esse padrão pois, é um padrão para persistência de dados que p
 
 Aplicação do padrão no projeto:
 
-        Foi criado uma classe com os métodos de insert, delete, pegar os dados do banco de dados, de maneira mais genérica possível para que se possa utilizar em todas as tabelas possíveis do banco de dados. Caso os métodos criados não dessem suporte a alguma busca ou inseção espeficica no banco de dados, seria criado essa funcionalidade a parte da classe genérica. Como foi o caso da consulta de usuário, mostrada abaixo.
+Foi criado uma classe com os métodos de insert, delete, pegar os dados do banco de dados, de maneira mais genérica possível para que se possa utilizar em todas as tabelas possíveis do banco de dados. Caso os métodos criados não dessem suporte a alguma busca ou inseção espeficica no banco de dados, seria criado essa funcionalidade a parte da classe genérica. Como foi o caso da consulta de usuário, mostrada abaixo.
 
 - Singleton:
 
@@ -393,11 +393,11 @@ O objetivo do Singleton é garantir que uma classe tenha somente uma instância 
 
 Aplicação do projeto:
 
-        O padrão Singleton no projeto foi aplicado no controle de instanciação dos objetos. Como a aplicação tem conexão a todo momento com o banco de dados, o padrao foi aplicado na classe que faz essa conexão, gerando apenas uma conexão com o banco economizando memória e evitando de duas aplicações tentarem se conectar ao banco ao mesmo tempo.
+O padrão Singleton no projeto foi aplicado no controle de instanciação dos objetos. Como a aplicação tem conexão a todo momento com o banco de dados, o padrao foi aplicado na classe que faz essa conexão, gerando apenas uma conexão com o banco economizando memória e evitando de duas aplicações tentarem se conectar ao banco ao mesmo tempo.
         
-        Foi aplicado também as telas do sistema, para toda tela foi aplicado o padrão, já que as telas são chamadas a todo momento. Depois da aplicação do padrão foi possível ver uma melhora da perfomance, já que a tela é instanciada uma vez, e não precisa criar todos os componentes da tela toda vez que a tela for chamada.
-        
-        Foi aplicado nos controles da tela fazendo que cada controle seja instanciado apenas uma vez.
+Foi aplicado também as telas do sistema, para toda tela foi aplicado o padrão, já que as telas são chamadas a todo momento. Depois da aplicação do padrão foi possível ver uma melhora da perfomance, já que a tela é instanciada uma vez, e não precisa criar todos os componentes da tela toda vez que a tela for chamada.
+
+Foi aplicado nos controles da tela fazendo que cada controle seja instanciado apenas uma vez.
 
 ###11 DIAGRAMA DE CLASSE
 
