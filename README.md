@@ -391,8 +391,9 @@ Aplicação do padrão no projeto:
 O objetivo do Singleton é garantir que uma classe tenha somente uma instância e fornece um ponto global de acesso para a mesma. Com o uso do padrão garantimos que só teremos uma instância de um determinada classe, e como na aplicação temos várias telas e vários controles sendo chamados, esse padrão vai garantir que não usemos mais memória do que precisamos.
 
 Aplicação do projeto:
-        O padrão Singleton no projeto foi aplicado no controle de instanciação dos objetos. Como a aplicação tem conexão a todo momento com o banco de dados, o padrao foi aplicado na classe que faz essa conexão, gerando apenas uma conexão com o banco.
-        Foi aplicado também as telas do sistema, para toda tela do 
+        O padrão Singleton no projeto foi aplicado no controle de instanciação dos objetos. Como a aplicação tem conexão a todo momento com o banco de dados, o padrao foi aplicado na classe que faz essa conexão, gerando apenas uma conexão com o banco economizando memória e evitando de duas aplicações tentarem se conectar ao banco ao mesmo tempo.
+        Foi aplicado também as telas do sistema, para toda tela foi aplicado o padrão, já que as telas são chamadas a todo momento. Depois da aplicação do padrão foi possível ver uma melhora da perfomance, já que a tela é instanciada uma vez, e não precisa criar todos os componentes da tela toda vez que a tela for chamada.
+        Foi aplicado nos controles da tela fazendo que cada controle seja instanciado apenas uma vez.
 
 ###11 DIAGRAMA DE CLASSE
 
