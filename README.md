@@ -368,6 +368,8 @@ De acordo com GAMMA (1998), MVC consiste em três tipos de objetos que compõem 
 
 Outro motivo que levou o grupo a escoher esse padrão foi que esse padrão se bem aplicado e estruturado corretamente, a troca de Views, por exemplo, se eu apliquei esse padrão para criar uma interface desktop e quiser mudar para uma interface web, eu apenas preciso fazer alterações na visão, sem precisa mexer em nada no Controle e no Modelo.
 
+        - No projeto o MVC foi aplicado da seguinte maneira.
+
 - DAO - Data Access Object
 
 Foi escolhido esse padrão pois, é um padrão para persistência de dados que permite separar regras de negócio das regras de acesso a banco de dados fornecendo uma interface para que as diversas outras camadas da aplicação possam se comunicar com o data source, com o padrão MVC a camada seria o Controle.
