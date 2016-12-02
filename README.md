@@ -323,13 +323,8 @@ https://github.com/Cassianokunsch/SMO/blob/master/Modelos/F%C3%ADsico/CRIACAO%20
          - Dados das outras entidades: Os dados seriam criados aleatóriamente por uma biblioteca do Python chamada de Faker;
 
 ####9.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELA E INSERÇÃO DOS DADOS
-        a) inclusão das instruções para criação das tabelas e estruturas de amazenamento do BD
-        b) inclusão das instruções de inserção dos dados nas referidas tabelas
-        c) inclusão das instruções para execução de outros procedimentos necessários
 
-
-        Entrega até este ponto em 01/11/2016
-
+Foi usado o hibernate annotation para criar as tabelas do banco. Para a inserção e a criação dos dados foi usado o Python, a biblioteca para a conexão com o banco foi usada a psycopg2, e para criação de dados fake foi usada a fakenames.
 
 ###10	TABELAS E PRINCIPAIS CONSULTAS<br>
 ####10.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas)
@@ -413,7 +408,6 @@ WHERE nome LIKE '%d'
 https://github.com/Cassianokunsch/SMO/tree/master/C%C3%B3digos%20SQL/9.5
 
 ####10.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Todas Junções)
-        Entrega até este ponto em 22/11/2016
         
 ####10.7	CONSULTAS COM GROUP BY (Mínimo 5)
 
@@ -422,14 +416,6 @@ INNER JOIN pessoa ON doador.idpessoa = pessoa.idpessoa
 GROUP BY tipo_sanguineo
 
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Imagens%20tabelas/GROUP%20BY.png)
-https://github.com/Cassianokunsch/SMO/tree/master/C%C3%B3digos%20SQL/9.7
-
-####10.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)
-
-####10.9	CONSULTAS COM SELF JOIN E VIEW (Todas Possíveis)
-
-####10.10	SUBCONSULTAS (Mínimo 3)
-        Entrega até este ponto em 29/11/2016
         
 ###11 DESCRIÇÃO DOS PADRÕES DE PROJETO UTILIZADOS
 
