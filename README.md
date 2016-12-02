@@ -333,7 +333,27 @@ https://github.com/Cassianokunsch/SMO/blob/master/Modelos/F%C3%ADsico/CRIACAO%20
 
 ###10	TABELAS E PRINCIPAIS CONSULTAS<br>
 ####10.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas)
-https://github.com/Cassianokunsch/SMO/tree/master/C%C3%B3digos%20SQL/9.1
+
+SELECT * FROM APARELHO
+
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Imagens%20tabelas/SELECT%20APARELHO.png)
+
+SELECT * FROM CAIXA
+
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Imagens%20tabelas/SELECT%20CAIXA.png)
+
+SELECT * FROM DOADOR
+
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Imagens%20tabelas/SELECT%20DOADOR.png)
+
+SELECT * LOCALIZACAO
+
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Imagens%20tabelas/SELECT%20LOCALIZACAO.png)
+
+SELECT * FROM MOTORISTA
+
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Imagens%20tabelas/SELECT%20MOTORISTA.png)
+
 
 ####10.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 3)
 
