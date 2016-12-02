@@ -219,7 +219,7 @@ Grupo02: Yan Pitangui
 
 ####7.2 DECISÕES DE PROJETO
 
-- Foi sugerida uma ideia pelo professor de criar mais duas outras entidades CONTATO e TIPO_CONTATO, mas não foi implementada no banco por questões de tempo para entrar o projeto para outra disciplina.
+- Foi sugerida uma ideia pelo professor de criar mais duas outras entidades CONTATO e TIPO_CONTATO, mas não foi implementada no banco por questões de tempo para entregar o projeto para outra disciplina.
 
 ####7.3 DESCRIÇÃO DOS DADOS
 
