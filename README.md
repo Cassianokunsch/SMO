@@ -416,10 +416,12 @@ https://github.com/Cassianokunsch/SMO/tree/master/C%C3%B3digos%20SQL/9.5
         Entrega até este ponto em 22/11/2016
         
 ####10.7	CONSULTAS COM GROUP BY (Mínimo 5)
+
 SELECT tipo_sanguineo FROM doador
 INNER JOIN pessoa ON doador.idpessoa = pessoa.idpessoa
 GROUP BY tipo_sanguineo
 
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Imagens%20tabelas/GROUP%20BY.png)
 https://github.com/Cassianokunsch/SMO/tree/master/C%C3%B3digos%20SQL/9.7
 
 ####10.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)
