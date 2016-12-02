@@ -354,6 +354,10 @@ SELECT * FROM MOTORISTA
 
 ![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Imagens%20tabelas/SELECT%20MOTORISTA.png)
 
+SELECT * FROM PESSOA
+
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Imagens%20tabelas/SELECT%20PESSOA.png)
+
 
 ####10.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 3)
 
@@ -361,38 +365,49 @@ SELECT * FROM pessoa
 INNER JOIN motorista on motorista.idpessoa = pessoa.idpessoa
 WHERE validade_cnh > '20000101'
 
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Imagens%20tabelas/INNER%20JOIN%20MOTORISTA.png)
+
 SELECT * FROM pessoa
 INNER JOIN doador on doador.idpessoa = pessoa.idpessoa
 WHERE tipo_sanguineo = 'A+'
 
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Imagens%20tabelas/SELECT%20WHERE.png)
+
 SELECT * FROM caixa
 WHERE validade > '20110101'
 
-
-https://github.com/Cassianokunsch/SMO/tree/master/C%C3%B3digos%20SQL/9.2
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Imagens%20tabelas/WHERE%20CAIXA.png)
 
 ####10.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E CAMPOS RENOMEADOS (Mínimo 2)
 
 SELECT * FROM caixa
 WHERE validade > '20110101'
 
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Imagens%20tabelas/WHERE%20CAIXA.png)
+
 SELECT * FROM pessoa
 INNER JOIN motorista on motorista.idpessoa = pessoa.idpessoa
 WHERE validade_cnh > '20000101'
 
-https://github.com/Cassianokunsch/SMO/tree/master/C%C3%B3digos%20SQL/9.3
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Imagens%20tabelas/INNER%20JOIN%20MOTORISTA.png)
+
 
 ####10.4	CONSULTAS QUE USAM OPERADORES LIKE (Mínimo 3)
-https://github.com/Cassianokunsch/SMO/tree/master/C%C3%B3digos%20SQL/9.4
 
 SELECT * FROM pessoa
 WHERE nome LIKE '%a'
 
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Imagens%20tabelas/LIKE%201.png)
+
 SELECT * FROM pessoa
 WHERE nome LIKE '%c'
 
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Imagens%20tabelas/like%202.png)
+
 SELECT * FROM pessoa
 WHERE nome LIKE '%d'
+
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/Imagens%20tabelas/like%202.png)
 
 ####10.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)
 https://github.com/Cassianokunsch/SMO/tree/master/C%C3%B3digos%20SQL/9.5
