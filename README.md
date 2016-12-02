@@ -436,6 +436,11 @@ Controle:
 Modelo:
         Na camada modelo foram criadas as classes que representam as tabelas presentes no banco de dados.
 
+        
+IMAGEM DOS PACOTES DO PROJETO:
+
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/POO2%20Imagens/MVC.png)
+
 - DAO - Data Access Object
 
 Foi escolhido esse padrão pois, é um padrão para persistência de dados que permite separar regras de negócio das regras de acesso a banco de dados fornecendo uma interface para que as diversas outras camadas da aplicação possam se comunicar com o data source. Com o padrão MVC a camada seria o Controle.
@@ -443,6 +448,10 @@ Foi escolhido esse padrão pois, é um padrão para persistência de dados que p
 Aplicação do padrão no projeto:
 
 Foi criado uma classe com os métodos de insert, delete, pegar os dados do banco de dados, de maneira mais genérica possível para que se possa utilizar em todas as tabelas possíveis do banco de dados. Caso os métodos criados não dessem suporte a alguma busca ou inseção espeficica no banco de dados, seria criado essa funcionalidade a parte da classe genérica. Como foi o caso da consulta de usuário, mostrada abaixo.
+
+IMAGEM DA ORGANIZAÇÃO DO PADRÃO NO PROJETO:
+
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/POO2%20Imagens/DAO.png)
 
 - Singleton:
 
@@ -455,6 +464,14 @@ O padrão Singleton no projeto foi aplicado no controle de instanciação dos ob
 Foi aplicado também as telas do sistema, para toda tela foi aplicado o padrão, já que as telas são chamadas a todo momento. Depois da aplicação do padrão foi possível ver uma melhora da perfomance, já que a tela é instanciada uma vez, e não precisa criar todos os componentes da tela toda vez que a tela for chamada.
 
 Foi aplicado nos controles da tela fazendo que cada controle seja instanciado apenas uma vez.
+
+IMAGEM DO CÓDIGO APLICADO NA TELA:
+
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/POO2%20Imagens/Singleton%20Tela.png)
+
+IMAGEM DO CÓDIGO APLICADO NO CONTROLE:
+
+![Alt text](https://github.com/Cassianokunsch/SMO/blob/master/POO2%20Imagens/Singleton%20controle.png)
 
 ###11 DIAGRAMA DE CLASSE
 
