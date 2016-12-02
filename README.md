@@ -336,13 +336,43 @@ https://github.com/Cassianokunsch/SMO/blob/master/Modelos/F%C3%ADsico/CRIACAO%20
 https://github.com/Cassianokunsch/SMO/tree/master/C%C3%B3digos%20SQL/9.1
 
 ####10.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 3)
+
+SELECT * FROM pessoa
+INNER JOIN motorista on motorista.idpessoa = pessoa.idpessoa
+WHERE validade_cnh > '20000101'
+
+SELECT * FROM pessoa
+INNER JOIN doador on doador.idpessoa = pessoa.idpessoa
+WHERE tipo_sanguineo = 'A+'
+
+SELECT * FROM caixa
+WHERE validade > '20110101'
+
+
 https://github.com/Cassianokunsch/SMO/tree/master/C%C3%B3digos%20SQL/9.2
 
 ####10.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E CAMPOS RENOMEADOS (Mínimo 2)
+
+SELECT * FROM caixa
+WHERE validade > '20110101'
+
+SELECT * FROM pessoa
+INNER JOIN motorista on motorista.idpessoa = pessoa.idpessoa
+WHERE validade_cnh > '20000101'
+
 https://github.com/Cassianokunsch/SMO/tree/master/C%C3%B3digos%20SQL/9.3
 
 ####10.4	CONSULTAS QUE USAM OPERADORES LIKE (Mínimo 3)
 https://github.com/Cassianokunsch/SMO/tree/master/C%C3%B3digos%20SQL/9.4
+
+SELECT * FROM pessoa
+WHERE nome LIKE '%a'
+
+SELECT * FROM pessoa
+WHERE nome LIKE '%c'
+
+SELECT * FROM pessoa
+WHERE nome LIKE '%d'
 
 ####10.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)
 https://github.com/Cassianokunsch/SMO/tree/master/C%C3%B3digos%20SQL/9.5
@@ -351,6 +381,10 @@ https://github.com/Cassianokunsch/SMO/tree/master/C%C3%B3digos%20SQL/9.5
         Entrega até este ponto em 22/11/2016
         
 ####10.7	CONSULTAS COM GROUP BY (Mínimo 5)
+SELECT tipo_sanguineo FROM doador
+INNER JOIN pessoa ON doador.idpessoa = pessoa.idpessoa
+GROUP BY tipo_sanguineo
+
 https://github.com/Cassianokunsch/SMO/tree/master/C%C3%B3digos%20SQL/9.7
 
 ####10.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)
