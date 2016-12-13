@@ -479,5 +479,7 @@ IMAGEM DO CÓDIGO APLICADO NO CONTROLE:
 
 ###11	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)
 
+https://github.com/Cassianokunsch/SMO/blob/master/Apresenta%C3%A7%C3%A3o.pdf
+
 ###12	DIFICULDADES ENCONTRADAS PELO GRUPO
 - O grupo não encontrou nenhuma dificuldade relação a criação do banco. Apenas em como estrutura-lo.
