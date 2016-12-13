@@ -9,8 +9,7 @@ CREATE TABLE pessoa
     nascimento DATE,
     nome VARCHAR(150),
     rg VARCHAR(9),
-    uf VARCHAR(2),
-    d_e_l_e_t_e CHAR
+    uf VARCHAR(2)
 );
 CREATE TABLE receptor
 (
