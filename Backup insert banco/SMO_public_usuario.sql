@@ -1,0 +1,1 @@
+INSERT INTO public.usuario (email, login, senha, telefone, idpessoa) VALUES (null, 'admin', 'admin', null, 1);
