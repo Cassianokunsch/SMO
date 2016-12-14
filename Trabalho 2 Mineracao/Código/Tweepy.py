@@ -54,10 +54,10 @@ class StdOutListener(tweepy.StreamListener):
  
 if __name__ == '__main__':
 
-    consumer_key = 'ORMqhNG7HUwajEuorEqeGWTCL'
-    consumer_secret = '3v2CNlc85hE55XiDhtUNwzssnyhrMSYFBWK2bwJokaSyK8XvhS'
-    access_token = '808615970378055680-ActX61hReGiFAxkdlyDn0l8MMy6E03n'
-    access_token_secret = '4m1u1UOVOUaKSZB2Viky7gViZejMQMeInQzUIGaVxaM6v'
+    consumer_key = **sua consumer_key**
+    consumer_secret = **sua consumer_secret**
+    access_token = **seu access_token**
+    access_token_secret = **seu access_token_secret**
     
     listener = StdOutListener()
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
