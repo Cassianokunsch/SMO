@@ -11,20 +11,26 @@ qtd_tweet = 10
 def salvar_bd():
     # Conecta com o BD criado no postgres
     DB = psycopg2.connect(host='localhost', dbname='SMO', user='postgres', password='Cc98576036')
-    # O cursos serve para fazer as operação, tipo: CREATE TABLE, SELECT e etc
+    
     cursor = DB.cursor()
-    # Utilizando o cursos pra criar a tabela
+    
+    # criando a tabela se ela não existir
     cursor.execute('CREATE TABLE IF NOT EXISTS table_twitter (id serial PRIMARY KEY, twitter varchar(250));')
+    
+    # varrendo cada tweet armazenado na lista de tweet
     for tweets in lst_tweet:
-        # Utilizando o cursos pra inserir os dados na tabela
+        # tirando caracter de bycode(b'')
         tweet = str(tweets).split("'")
+        # inserindo o tweet no banco
         cursor.execute("INSERT INTO table_twitter (twitter) VALUES ('"+tweet[1]+"');")
-    # Fechando/finalizando o BD como um todo
+        
+    # commitando os inserts
     DB.commit()
     cursor.close()
+    
+    # fechando o banco
     DB.close()
-
-    # Tudo já foi analisado e salvo, então informar isso e fechar o sistema
+    
     print("Salvo com sucesso!")
     sys.exit()
 
@@ -53,15 +59,22 @@ class StdOutListener(tweepy.StreamListener):
         return True # To continue listening
  
 if __name__ == '__main__':
-
+    
+    # minhas credenciais
     consumer_key = **sua consumer_key**
     consumer_secret = **sua consumer_secret**
     access_token = **seu access_token**
     access_token_secret = **seu access_token_secret**
     
+    # instanciando o "escutador"
     listener = StdOutListener()
+    
+    # passando as credenciais
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
- 
+    
+    # criando a stream e passando o escutador e as credenciais
     stream = tweepy.Stream(auth, listener)
+    
+    # passando as palavras que eu quero que sejam procuradas nos tweets
     stream.filter(track=['temperatura', 'transporte', 'caixa termica', 'orgao', 'doação', 'transplante'])
