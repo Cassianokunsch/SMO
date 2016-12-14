@@ -1,34 +1,11 @@
 import tweepy
-import sys
 import psycopg2
+import sys
 
-p_palavras = []
+
 cont = 0
-limit = 1000
-
-
-class StdOutListener(tweepy.StreamListener):
-    ''' Handles data received from the stream. '''
-
-    def on_status(self, status):
-        global cont
-        global limit
-        cont = cont + 1
-        print(cont)
-
-        # Captura os twitters e coloca em uma lista
-        p_palavras.append(status.text)
-
-        if (cont == limit):
-            salvar_bd()
-
-    def on_error(self, status_code):
-        if status_code == 420:
-            # Retornando falso em on_data desliga
-            print("ERRO! Fechar feed.")
-            salvar_bd()
-
-        return False
+lst_tweet = []
+qtd_tweet = 10
 
 
 def salvar_bd():
@@ -37,10 +14,11 @@ def salvar_bd():
     # O cursos serve para fazer as operação, tipo: CREATE TABLE, SELECT e etc
     cursor = DB.cursor()
     # Utilizando o cursos pra criar a tabela
-    cursor.execute('CREATE TABLE IF NOT EXISTS table_twitter (id serial PRIMARY KEY, twitter varchar(144);')
-    for elemento in p_palavras:
+    cursor.execute('CREATE TABLE IF NOT EXISTS table_twitter (id serial PRIMARY KEY, twitter varchar(250));')
+    for tweets in lst_tweet:
         # Utilizando o cursos pra inserir os dados na tabela
-        cursor.execute('INSERT INTO twitter (table_twitter) VALUES (%s);', (elemento))
+        tweet = str(tweets).split("'")
+        cursor.execute("INSERT INTO table_twitter (twitter) VALUES ('"+tweet[1]+"');")
     # Fechando/finalizando o BD como um todo
     DB.commit()
     cursor.close()
@@ -51,28 +29,39 @@ def salvar_bd():
     sys.exit()
 
 
+class StdOutListener(tweepy.StreamListener):
+ 
+    def on_status(self, status):
+        global cont
+        global limit
+        cont = cont + 1
+        print(cont)
+        # Captura os twitters e coloca em uma lista
+        # usei uft-8 para conseguir armazenar os tweets
+        p_palavras.append(status.text.encode('utf-8'))
+        
+        # quando chegar na quantidade de tweet que eu quero vai salvar no banco
+        if (cont == qtd_tweet):
+            salvar_bd()
+        
+    def on_error(self, status_code):
+        print('Got an error with status code: ' + str(status_code))
+        return True # To continue listening
+ 
+    def on_timeout(self):
+        print('Timeout...')
+        return True # To continue listening
+ 
 if __name__ == '__main__':
-    # Chaves de autenticação para se ter acesso a conta
+
     consumer_key = 'ORMqhNG7HUwajEuorEqeGWTCL'
     consumer_secret = '3v2CNlc85hE55XiDhtUNwzssnyhrMSYFBWK2bwJokaSyK8XvhS'
     access_token = '808615970378055680-ActX61hReGiFAxkdlyDn0l8MMy6E03n'
     access_token_secret = '4m1u1UOVOUaKSZB2Viky7gViZejMQMeInQzUIGaVxaM6v'
-
+    
+    listener = StdOutListener()
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
-
-    listener = StdOutListener()
-
-    # passando autenticação e o "escutador" como parametros
+ 
     stream = tweepy.Stream(auth, listener)
-    #  filtrando as frases pegas para somente aquelas que possuem a palavras abaixo
     stream.filter(track=['temperatura', 'transporte', 'caixa termica', 'orgao', 'doação', 'transplante'])
-    # Chamando a funcao para pegar os twitters
-    listener.on_status(tweepy.API(auth))
-
-
-
-
-    p_palavras = ler_arq("bdPalavras", ".txt")
-    print(p_palavras)
-    #salvar_bd()
