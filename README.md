@@ -483,3 +483,11 @@ https://github.com/Cassianokunsch/SMO/blob/master/Apresenta%C3%A7%C3%A3o.pdf
 
 ###12	DIFICULDADES ENCONTRADAS PELO GRUPO
 - O grupo não encontrou nenhuma dificuldade relação a criação do banco. Apenas em como estrutura-lo.
+
+# TRABALHO 2
+
+## Código
+ https://github.com/Cassianokunsch/SMO/blob/master/Trabalho%202%20Mineracao/C%C3%B3digo/Tweepy.py
+
+## Slides
+ https://github.com/Cassianokunsch/SMO/blob/master/Trabalho%202%20Mineracao/Slides/Tweepy.pdf
