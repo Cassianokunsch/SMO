@@ -44,7 +44,7 @@ class StdOutListener(tweepy.StreamListener):
         print(cont)
         # Captura os twitters e coloca em uma lista
         # usei uft-8 para conseguir armazenar os tweets
-        p_palavras.append(status.text.encode('utf-8'))
+        lst_tweet.append(status.text.encode('utf-8'))
         
         # quando chegar na quantidade de tweet que eu quero vai salvar no banco
         if (cont == qtd_tweet):
